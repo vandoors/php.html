@@ -18,7 +18,7 @@
             </form>
         <?php } else { ?>
             <h2>:)</h2>
-            Hello <?= $POST['first_name'] . " " . $_POST['last_name'] ?>
+            Hello <?= $_POST['first_name'] . " " . $_POST['last_name'] ?>
             Thank you for submitting your name.
         <?php } ?>
     </body>
