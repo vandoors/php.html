@@ -1,14 +1,14 @@
 <?php
 
-class Car {}
+class Album {}
 
-$boolean = true;
-$integer = 123;
-$integer_negative = -13;
-$float_double = 12.35;
-$string = "Hello World";
-$array = array('one', 'fish', 'two', 'fish', 'red', 'fish');
-$object = new Car();
+$boolean = false;
+$integer = 13;
+$integer_negative = -22;
+$float_double = 19.89;
+$string = "hi world";
+$array = array('debut', 'fearless', 'speak now', 'red', '1989', 'reputation', 'lover', 'folklore', 'evermore', 'midnights');
+$object = new Album();
 $null = NULL;
 ?>
 
