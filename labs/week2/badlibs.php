@@ -8,7 +8,7 @@
                 <label for="name">Noun</label>
                 <input type="text" id="name" name="noun"><br>
 
-                <label for="verb">Verb</label>
+                <label for="verb">Verb (past tense)</label>
                 <input type="text" id="verb" name="verb"><br>
 
                 <label for="adverb">Adverb</label>
