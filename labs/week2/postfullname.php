@@ -18,7 +18,30 @@
             </form>
         <?php } else { ?>
             <h2>:)</h2>
-            Hello <?= $_POST['first_name'] . " " . $_POST['last_name'] ?>
+
+            <?php
+                $first_name = $_POST['first_name'];
+                $last_name = $_POST['last_name'];
+
+                $dbc = mysqli_connect('localhost', 'student', 'student', 'jvandorsten')
+                    or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
+
+                $query = "INSERT INTO fullname (first_name, last_name)"
+                    . "VALUES ('$first_name', '$last_name')";
+
+                $result = mysqli_query($dbc, $query)
+                    or trigger_error('Error querying database.', E_USER_WARNING);
+
+                if (!$result)
+                {
+                    trigger_error("Query error description: "
+                        . mysqli_error($dbc), E_USER_WARNING);
+                }
+
+                mysqli_close($dbc);
+            ?>
+
+            Hello <?= $first_name . " " . $last_name ?>
             Thank you for submitting your name.
         <?php } ?>
     </body>
