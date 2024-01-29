@@ -20,6 +20,11 @@
                 <input type="submit" name="submit" value="Generate Badlib">
             </form>
         <?php } else { ?>
+            <!-- Generated using Google Bard, using the Gemini Pro LLM -->
+            <!-- Prompt:
+                "Generate a very short badlib featuring a noun, verb, adverb, and an adjective.
+                Use placeholders labeled as the part of speech."
+            -->
             <?= "The grumpy $_POST['adjective'] goblin $_POST['verb'] the sparkly $_POST['noun'] very $_POST['adverb']." ?>
         <?php } ?>
     </body>
