@@ -17,5 +17,5 @@ $books = [
 ];
 
 foreach ($books as $book => $author) {
-    echo $book . " by " . $author, PHP_EOL;
+    echo $book . " by " . $author . PHP_EOL;
 }
