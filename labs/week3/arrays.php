@@ -16,6 +16,6 @@ $books = [
     "This Is How You Lose the Time War" => "Amal El-Mohtar & Max Gladstone"
 ];
 
-for ($i = 0; $i < count($book_titles); $i++) {
-    echo $book_titles[$i] . " by " . $books[$book_titles[$i]] . PHP_EOL; // PHP_EOL -> https://stackoverflow.com/a/20749472
+foreach ($books as $book => $author) {
+    echo $book . " by " . $author, PHP_EOL;
 }
