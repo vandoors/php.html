@@ -23,7 +23,11 @@ foreach ($books as $book => $author) {
     echo $book . " by " . $author . "<br>";
 }
 
-echo "<br><br>";
+echo "<br>";
 
 $books += ["Beach Read" => "Emily Henry"];
 print_r($books);
+
+echo "<br><br>";
+
+echo count($books);
