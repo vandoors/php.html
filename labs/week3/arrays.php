@@ -22,3 +22,8 @@ $books = [
 foreach ($books as $book => $author) {
     echo $book . " by " . $author . "<br>";
 }
+
+echo "<br><br>";
+
+$books += ["Beach Read" => "Emily Henry"];
+print_r($books);
