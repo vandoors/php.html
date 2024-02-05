@@ -8,5 +8,4 @@ $book_titles = [
     "Gone Girl"
 ];
 
-echo $book_titles[2];
-echo $book_titles[3];
+echo $book_titles[2] . ", " . $book_titles[3];
