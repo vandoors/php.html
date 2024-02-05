@@ -31,3 +31,7 @@ print_r($books);
 echo "<br><br>";
 
 echo count($books);
+
+echo "<br><br>";
+
+print_r(asort($books));
