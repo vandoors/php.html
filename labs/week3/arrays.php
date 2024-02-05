@@ -1,6 +1,7 @@
 <?php
 
-$book_titles = [
+$book_titles =
+[
     "The Hunger Games",
     "Catching Fire",
     "Mockingjay",
@@ -12,14 +13,16 @@ echo $book_titles[2] . ", " . $book_titles[3];
 
 echo "<br><br>";
 
-$books = [
+$books =
+[
     "The Ballad of Songbirds and Snakes" => "Suzanne Collins",
     "Gone Girl" => "Gillian Flynn",
     "This Is How You Lose the Time War" => "Amal El-Mohtar & Max Gladstone"
 ];
 
 // foreach, chapter 9 exercise 2
-foreach ($books as $book => $author) {
+foreach ($books as $book => $author)
+{
     echo $book . " by " . $author . "<br>";
 }
 
