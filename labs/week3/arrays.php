@@ -17,5 +17,5 @@ $books = [
 ];
 
 for ($i = 0; $i < count($book_titles); $i++) {
-    echo $book_titles[$i] . " by " . $books[$book_titles[$i]], PHP_EOL; // PHP_EOL -> https://stackoverflow.com/a/20749472
+    echo $book_titles[$i] . " by " . $books[$book_titles[$i]] . PHP_EOL; // PHP_EOL -> https://stackoverflow.com/a/20749472
 }
