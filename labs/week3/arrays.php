@@ -16,6 +16,7 @@ $books = [
     "This Is How You Lose the Time War" => "Amal El-Mohtar & Max Gladstone"
 ];
 
+// https://www.w3schools.com/php/php_looping_foreach.asp
 foreach ($books as $book => $author) {
-    echo $book . " by " . $author . PHP_EOL;
+    echo $book . " by " . $author . "<br>";
 }
