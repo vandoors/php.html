@@ -34,5 +34,5 @@ echo count($books);
 
 echo "<br><br>";
 
-asort($books);
+asort($books); // doesn't seem to properly sort ¯\_(ツ)_/¯
 print_r($books);
