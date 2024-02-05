@@ -10,6 +10,8 @@ $book_titles = [
 
 echo $book_titles[2] . ", " . $book_titles[3];
 
+echo "<br><br>";
+
 $books = [
     "The Ballad of Songbirds and Snakes" => "Suzanne Collins",
     "Gone Girl" => "Gillian Flynn",
