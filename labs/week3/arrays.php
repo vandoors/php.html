@@ -34,4 +34,5 @@ echo count($books);
 
 echo "<br><br>";
 
-print_r(asort($books));
+asort($books);
+print_r($books);
