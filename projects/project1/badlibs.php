@@ -8,7 +8,7 @@
     <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
 </head>
 <body class="m-3">
-    <h1 class="h2">Badlib Generator</h1>
+    <h1 class="h3">Badlib Generator</h1>
 
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
         <div class="form-group">
@@ -114,7 +114,7 @@
 
             foreach ($stories as $story)
             {
-                echo '<p class="story">' . $story['constructed_story'] . '</p>';
+                echo '<p class="story f2">' . $story['constructed_story'] . '</p>';
             }
 
             mysqli_close($dbc);
