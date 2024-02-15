@@ -8,6 +8,8 @@
     <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
 </head>
 <body class="m-3">
+    <h1 class="h2">Badlib Generator</h1>
+
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
         <div class="form-group">
             <div class="form-group-header">
