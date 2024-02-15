@@ -18,6 +18,32 @@
 
         <input type="submit" name="submit" value="Generate Badlib">
     </form>
+
+    <hr>
+
+    <?php
+        $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
+                or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
+
+        $query = "SELECT `id`, `constructed_story` FROM `badlibs`";
+
+        $result = mysqli_query($dbc, $query)
+                or trigger_error('Error querying database.', E_USER_WARNING);
+
+        if (!$result)
+        {
+            trigger_error("Query error description: "
+                    . mysqli_error($dbc), E_USER_WARNING);
+        }
+
+        while ($row = mysqli_fetch_array($result))
+        {
+            echo '<p>' . $row['constructed_story'] . '</p>';
+        }
+
+        mysqli_close($dbc);
+    ?>
+
     <?php
         if (isset($_POST['submit']))
         {
@@ -39,7 +65,7 @@
             if (!$result)
             {
                 trigger_error("Query error description: "
-                    . mysqli_error($dbc), E_USER_WARNING);
+                        . mysqli_error($dbc), E_USER_WARNING);
             }
 
             mysqli_close($dbc);
