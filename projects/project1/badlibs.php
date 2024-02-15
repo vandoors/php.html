@@ -1,6 +1,11 @@
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Badlibs (project 1)</title>
+
+    <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
 </head>
 <body>
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
