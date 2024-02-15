@@ -49,12 +49,10 @@
             </div>
         </div>
 
-        <div class="form-actions">
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit" name="submit">
-                    Generate story
-                </button>
-            </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit" name="submit">
+                Generate story
+            </button>
         </div>
     </form>
 
