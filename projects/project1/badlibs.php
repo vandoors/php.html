@@ -11,7 +11,9 @@
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
         <div class="form-group">
             <div class="form-group-header">
-                <label for="name">Noun</label>
+                <label for="name">
+                    Noun
+                </label>
             </div>
 
             <div class="form-group-body">
@@ -21,7 +23,9 @@
 
         <div class="form-group">
             <div class="form-group-header">
-                <label for="verb">Verb (past tense)</label>
+                <label for="verb">
+                    Verb (past tense)
+                </label>
             </div>
 
             <div class="form-group-body">
@@ -31,7 +35,9 @@
 
         <div class="form-group">
             <div class="form-group-header">
-                <label for="adjective">Adjective</label>
+                <label for="adjective">
+                    Adjective
+                </label>
             </div>
 
             <div class="form-group-body">
@@ -49,14 +55,18 @@
             </div>
         </div>
 
+        <br>
+
         <div class="form-group">
             <button class="btn btn-primary" type="submit" name="submit">
-                Generate story
+                Generate
             </button>
         </div>
     </form>
 
+    <br>
     <hr>
+    <br>
 
     <?php
         if (isset($_POST['submit']))
@@ -86,29 +96,31 @@
         }
     ?>
 
-    <?php
-        $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
-                or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
+    <div id="stories">
+        <?php
+            $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
+                    or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
 
-        $query = "SELECT `id`, `constructed_story` FROM `badlibs` ORDER BY `id` DESC";
+            $query = "SELECT `id`, `constructed_story` FROM `badlibs` ORDER BY `id` DESC";
 
-        $result = mysqli_query($dbc, $query)
-                or trigger_error('Error querying database.', E_USER_WARNING);
+            $result = mysqli_query($dbc, $query)
+                    or trigger_error('Error querying database.', E_USER_WARNING);
 
-        if (!$result)
-        {
-            trigger_error("Query error description: "
-                    . mysqli_error($dbc), E_USER_WARNING);
-        }
+            if (!$result)
+            {
+                trigger_error("Query error description: "
+                        . mysqli_error($dbc), E_USER_WARNING);
+            }
 
-        $stories = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            $stories = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-        foreach ($stories as $story)
-        {
-            echo '<p>' . $story['constructed_story'] . '</p>';
-        }
+            foreach ($stories as $story)
+            {
+                echo '<p class="story">' . $story['constructed_story'] . '</p>';
+            }
 
-        mysqli_close($dbc);
-    ?>
+            mysqli_close($dbc);
+        ?>
+    </div>
 </body>
 </html>
