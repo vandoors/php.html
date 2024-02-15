@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group m-3">
             <button class="btn btn-primary" type="submit" name="submit">
                 Generate story
             </button>
