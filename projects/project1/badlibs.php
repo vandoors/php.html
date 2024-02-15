@@ -55,8 +55,6 @@
             </div>
         </div>
 
-        <br>
-
         <div class="form-group">
             <button class="btn btn-primary" type="submit" name="submit">
                 Generate
@@ -64,9 +62,7 @@
         </div>
     </form>
 
-    <br>
     <hr>
-    <br>
 
     <?php
         if (isset($_POST['submit']))
