@@ -25,11 +25,16 @@
         $adjective = $_POST['adjective'];
         $adverb = $_POST['adverb'];
 
-/*        $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
+        $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
                 or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
 
-        $query = "INSERT INTO badlibs (noun, verb, adjective, adverb)"
-                . "VALUES ('$noun', '$verb', '$adjective', '$adverb)";
+        $noun = mysqli_real_escape_string($dbc, $_POST['noun']);
+        $verb = mysqli_real_escape_string($dbc, $_POST['verb']);
+        $adjective = mysqli_real_escape_string($dbc, $_POST['adjective']);
+        $adverb = mysqli_real_escape_string($dbc, $_POST['adverb']);
+
+        $query = "INSERT INTO `badlibs` (`noun`, `verb`, `adjective`, `adverb`)"
+                . "VALUES ('$noun', '$verb', '$adjective', '$adverb')";
 
         $result = mysqli_query($dbc, $query)
                 or trigger_error('Error querying database.', E_USER_WARNING);
@@ -40,7 +45,7 @@
                 . mysqli_error($dbc), E_USER_WARNING);
         }
 
-        mysqli_close($dbc);*/
+        mysqli_close($dbc);
 
         echo "The $adjective $noun $verb $adverb. That's hilarious!";
     ?>
