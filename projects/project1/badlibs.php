@@ -22,31 +22,6 @@
     <hr>
 
     <?php
-        $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
-                or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
-
-        $query = "SELECT `id`, `constructed_story` FROM `badlibs` ORDER BY `id` DESC";
-
-        $result = mysqli_query($dbc, $query)
-                or trigger_error('Error querying database.', E_USER_WARNING);
-
-        if (!$result)
-        {
-            trigger_error("Query error description: "
-                    . mysqli_error($dbc), E_USER_WARNING);
-        }
-
-        $stories = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-        foreach ($stories as $story)
-        {
-            echo '<p>' . $story['constructed_story'] . '</p>';
-        }
-
-        mysqli_close($dbc);
-    ?>
-
-    <?php
         if (isset($_POST['submit']))
         {
             $noun = $_POST['noun'];
@@ -72,6 +47,31 @@
 
             mysqli_close($dbc);
         }
+    ?>
+
+    <?php
+        $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
+                or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
+
+        $query = "SELECT `id`, `constructed_story` FROM `badlibs` ORDER BY `id` DESC";
+
+        $result = mysqli_query($dbc, $query)
+                or trigger_error('Error querying database.', E_USER_WARNING);
+
+        if (!$result)
+        {
+            trigger_error("Query error description: "
+                    . mysqli_error($dbc), E_USER_WARNING);
+        }
+
+        $stories = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        foreach ($stories as $story)
+        {
+            echo '<p>' . $story['constructed_story'] . '</p>';
+        }
+
+        mysqli_close($dbc);
     ?>
 </body>
 </html>
