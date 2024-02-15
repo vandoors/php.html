@@ -7,7 +7,7 @@
 
     <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
 </head>
-<body>
+<body class="m-3">
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
         <div class="form-group">
             <div class="form-group-header">
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div class="form-group m-3">
+        <div class="form-group">
             <button class="btn btn-primary" type="submit" name="submit">
                 Generate story
             </button>
