@@ -3,7 +3,6 @@
     <title>Badlibs (project 1)</title>
 </head>
 <body>
-<?php if (!isset($_POST['submit'])) { ?>
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
         <label for="name">Noun</label>
         <input type="text" id="name" name="noun"><br>
@@ -18,33 +17,33 @@
         <input type="text" id="adverb" name="adverb"><br>
 
         <input type="submit" name="submit" value="Generate Badlib">
-<?php } else { ?>
+    </form>
     <?php
-        $noun = $_POST['noun'];
-        $verb = $_POST['verb'];
-        $adjective = $_POST['adjective'];
-        $adverb = $_POST['adverb'];
-        $constructed_story = "The $adjective $noun $verb $adverb — lol!";
-
-        $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
-                or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
-
-        $query = "INSERT INTO `badlibs` (`noun`, `verb`, `adjective`, `adverb`, `constructed_story`)"
-                . "VALUES ('$noun', '$verb', '$adjective', '$adverb', '$constructed_story')";
-
-        $result = mysqli_query($dbc, $query)
-                or trigger_error('Error querying database.', E_USER_WARNING);
-
-        if (!$result)
+        if (isset($_POST['submit']))
         {
-            trigger_error("Query error description: "
-                . mysqli_error($dbc), E_USER_WARNING);
+            $noun = $_POST['noun'];
+            $verb = $_POST['verb'];
+            $adjective = $_POST['adjective'];
+            $adverb = $_POST['adverb'];
+            $constructed_story = "The $adjective $noun $verb $adverb — lol!";
+
+            $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
+                    or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
+
+            $query = "INSERT INTO `badlibs` (`noun`, `verb`, `adjective`, `adverb`, `constructed_story`)"
+                    . "VALUES ('$noun', '$verb', '$adjective', '$adverb', '$constructed_story')";
+
+            $result = mysqli_query($dbc, $query)
+                    or trigger_error('Error querying database.', E_USER_WARNING);
+
+            if (!$result)
+            {
+                trigger_error("Query error description: "
+                    . mysqli_error($dbc), E_USER_WARNING);
+            }
+
+            mysqli_close($dbc);
         }
-
-        mysqli_close($dbc);
-
-        echo $constructed_story;
     ?>
-<?php } ?>
 </body>
 </html>
