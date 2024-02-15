@@ -53,7 +53,7 @@
         $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
                 or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
 
-        $query = "SELECT constructed_story` FROM `badlibs` ORDER BY `id` DESC";
+        $query = "SELECT `id`, `constructed_story` FROM `badlibs` ORDER BY `id` DESC";
 
         $result = mysqli_query($dbc, $query)
                 or trigger_error('Error querying database.', E_USER_WARNING);
