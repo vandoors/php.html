@@ -64,11 +64,11 @@
                     . mysqli_error($dbc), E_USER_WARNING);
         }
 
-        $stories = mysqli_fetch_all($result);
+        $stories = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         foreach ($stories as $story)
         {
-            echo '<p>' . $story . '</p>';
+            echo '<p>' . $story['constructed_story'] . '</p>';
         }
 
         mysqli_close($dbc);
