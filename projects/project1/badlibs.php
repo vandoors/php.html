@@ -53,7 +53,7 @@
         $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
                 or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
 
-        $query = "SELECT `id`, `constructed_story` FROM `badlibs` ORDER BY `id` DESC";
+        $query = "SELECT constructed_story` FROM `badlibs` ORDER BY `id` DESC";
 
         $result = mysqli_query($dbc, $query)
                 or trigger_error('Error querying database.', E_USER_WARNING);
@@ -64,11 +64,11 @@
                     . mysqli_error($dbc), E_USER_WARNING);
         }
 
-        $stories = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $stories = mysqli_fetch_all($result);
 
         foreach ($stories as $story)
         {
-            echo '<p>' . $story['constructed_story'] . '</p>';
+            echo '<p>' . $story . '</p>';
         }
 
         mysqli_close($dbc);
