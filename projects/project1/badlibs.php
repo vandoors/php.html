@@ -9,49 +9,49 @@
 </head>
 <body>
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
-        <div className="form-group">
-            <div className="form-group-header">
+        <div class="form-group">
+            <div class="form-group-header">
                 <label for="name">Noun</label>
             </div>
 
-            <div className="form-group-body">
-                <input className="form-control" type="text" id="name" name="noun">
+            <div class="form-group-body">
+                <input class="form-control" type="text" id="name" name="noun">
             </div>
         </div>
 
-        <div className="form-group">
-            <div className="form-group-header">
+        <div class="form-group">
+            <div class="form-group-header">
                 <label for="verb">Verb (past tense)</label>
             </div>
 
-            <div className="form-group-body">
-                <input className="form-control" type="text" id="verb" name="verb">
+            <div class="form-group-body">
+                <input class="form-control" type="text" id="verb" name="verb">
             </div>
         </div>
 
-        <div className="form-group">
-            <div className="form-group-header">
+        <div class="form-group">
+            <div class="form-group-header">
                 <label for="adjective">Adjective</label>
             </div>
 
-            <div className="form-group-body">
-                <input className="form-control" type="text" id="adjective" name="adjective">
+            <div class="form-group-body">
+                <input class="form-control" type="text" id="adjective" name="adjective">
             </div>
         </div>
 
-        <div className="form-group">
-            <div className="form-group-header">
+        <div class="form-group">
+            <div class="form-group-header">
                 <label for="adverb">Adverb</label>
             </div>
 
-            <div className="form-group-body">
-                <input className="form-control" type="text" id="adverb" name="adverb">
+            <div class="form-group-body">
+                <input class="form-control" type="text" id="adverb" name="adverb">
             </div>
         </div>
 
-        <div className="form-actions">
-            <div className="form-group">
-                <button className="btn btn-primary" type="submit" name="submit">
+        <div class="form-actions">
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit" name="submit">
                     Generate story
                 </button>
             </div>
