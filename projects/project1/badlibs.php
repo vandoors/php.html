@@ -114,7 +114,7 @@
 
             foreach ($stories as $story)
             {
-                echo '<p class="story f2">' . $story['constructed_story'] . '</p>';
+                echo '<p class="story f5">' . $story['constructed_story'] . '</p>';
             }
 
             mysqli_close($dbc);
