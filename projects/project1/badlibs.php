@@ -73,7 +73,8 @@
             $verb = $_POST['verb'];
             $adjective = $_POST['adjective'];
             $adverb = $_POST['adverb'];
-            $constructed_story = "The $adjective $noun $verb $adverb — lol!";
+            // SET BADLIB STORY HERE
+            $constructed_story = "There once was a $noun who $adverb $verb — some say they were $adjective.";
 
             $dbc = mysqli_connect('localhost', 'student', 'student', 'Badlibs')
                     or trigger_error('Error connecting to MySQL server.', E_USER_ERROR);
