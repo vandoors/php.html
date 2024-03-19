@@ -69,7 +69,7 @@
                 <label for="postContent" class="form-label">Content</label>
             </div>
             <div class="form-group-body">
-                <textarea class="form-control" id="postContent" name="post_content" rows="3" value="<?= isset($_POST['post_content']) ? htmlspecialchars($_POST['post_content']) : '' ?>" disabled></textarea>
+                <textarea class="form-control" id="postContent" name="post_content" rows="3" disabled><?= isset($_POST['post_content']) ? htmlspecialchars($_POST['post_content']) : '' ?></textarea>
             <div>
         </div>
     </form>
