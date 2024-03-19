@@ -84,7 +84,7 @@
             <div>
         </div>
 
-        <button type="submit" class="btn btn-primary" name="create_new_post">Create post</button>
+        <button type="submit" class="btn btn-primary mt-3" name="create_new_post">Create post</button>
     </form>
     <?php
       }
