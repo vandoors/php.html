@@ -7,10 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet">
+
     <title>Blog dashboard</title>
 </head>
 <body>
     <h1>Blog</h1>
-    
+    <a href="write.php" class="btn">New post</a>
 </body>
 </html>
