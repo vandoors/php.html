@@ -60,6 +60,7 @@
             header("Location: index.php");
         }
     ?>
+    <h1 class="h2">Edit blog post</h1>
     <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
         <div class="form-group">
             <div class="form-group-header">
