@@ -41,7 +41,7 @@
             $display_new_post_form = false;
     ?>
     
-    <h1>Post successfully created!</h1>
+    <h1 class="h2">Post successfully created!</h1>
     <p>The below post data has been added to the database.</p>
     <hr>
 
@@ -80,7 +80,7 @@
         if ($display_new_post_form)
         {
     ?>
-    <h1>New blog post</h1>
+    <h1 class="h2">New blog post</h1>
     <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
         <div class="form-group">
             <div class="form-group-header">
@@ -103,6 +103,7 @@
         <div class="form-group">
             <div class="form-group-header">
                 <label for="postContent" class="form-label">Content</label>
+                <p class="color-fg-muted">Post content is to be written in markdown. See the markdown <a href="https://www.markdownguide.org/basic-syntax/" target="_blank" rel="noopener noreferrer">basic syntax</a> for more information.</p>
             </div>
             <div class="form-group-body">
                 <textarea class="form-control" id="postContent" name="post_content" rows="3" required></textarea>
