@@ -17,21 +17,40 @@
     <?php
         $display_new_post_form = true;
 
+        if (isset($_POST['post_title'], $_POST['post_date'],
+                $_POST['post_content']))
+        {
+            require_once('../dbconnection.php');
+
+            $post_title = $_POST['post_title'];
+            $post_date = $_POST['post_date'];
+            $post_content = $_POST['post_content'];
+
+            $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
+                    or trigger_error(
+                            'Error connecting to MySQL server for' . DB_NAME, 
+                            E_USER_ERROR);
+
+            echo "<p>$post_title</p>";
+            echo "<p>$post_date</p>";
+            echo "<p>$post_content</p>";
+        }
+
         if ($display_new_post_form)
         {
     ?>
     <form class="needs-validation" novalidate method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
         <div class="mb-3">
             <label for="postTitle" class="form-label">Title</label>
-            <input type="text" maxlength="255" class="form-control" id="postTitle" placeholder="New post" required>
+            <input type="text" maxlength="255" class="form-control" id="postTitle" name="post_title" placeholder="New post" required>
         </div>
         <div class="mb-3">
             <label for="postDate" class="form-label">Date</label>
-            <input type="date" class="form-control" id="postDate" required>
+            <input type="date" class="form-control" id="postDate" name="post_date" required>
         </div>
         <div class="mb-3">
             <label for="postContent" class="form-label">Content</label>
-            <textarea class="form-control" id="postContent" rows="3" required></textarea>
+            <textarea class="form-control" id="postContent" name="post_content" rows="3" required></textarea>
         </div>
         <div class="mb-3">
             <button type="submit" class="btn btn-primary" name="create_new_post">Create post</button>
