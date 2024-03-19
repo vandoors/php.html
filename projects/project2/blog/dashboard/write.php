@@ -11,7 +11,7 @@
 
     <title>New blog post</title>
 </head>
-<body>
+<body class="m-6">
     <?php
         $display_new_post_form = true;
 
