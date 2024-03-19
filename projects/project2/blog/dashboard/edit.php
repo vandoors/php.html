@@ -85,7 +85,7 @@
                 <label for="postContent" class="form-label">Content</label>
             </div>
             <div class="form-group-body">
-                <textarea class="form-control" id="postContent" name="post_content" rows="3">value="<?=$post_content?>"</textarea>
+                <textarea class="form-control" id="postContent" name="post_content" rows="3"><?=$post_content?></textarea>
             <div>
         </div>
 
