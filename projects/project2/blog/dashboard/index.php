@@ -38,9 +38,9 @@
             <?php
                 while($row = mysqli_fetch_assoc($result))
                 {
-                    echo '<div class="my-2">';
-                    echo '<a href="edit.php?id=' . $row['id'] . '" class="btn btn-sm">' . 'Edit</a>';
-                    echo '<span>' . $row['title'] . '</span>';
+                    echo '<div class="my-3">';
+                    echo '<a href="edit.php?id=' . $row['id'] . '" class="btn btn-sm mr-2">' . 'Edit</a>';
+                    echo '<span class="mr-2">' . $row['title'] . '</span>';
                     echo '<span>' . $row['date'] . '</span>';
                     echo '</div>';
                 }
