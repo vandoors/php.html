@@ -42,7 +42,7 @@
     ?>
     
     <h1>Post successfully created!</h1>
-    <p>The following post has been added to the database:</p>
+    <p>The below post data has been added to the database.</p>
     <hr>
     <p><strong>Title:</strong> <?= $post_title ?></p>
     <p><strong>Date:</strong> <?= $post_date ?></p>
