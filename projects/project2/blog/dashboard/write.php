@@ -83,6 +83,8 @@
                 <textarea class="form-control" id="postContent" name="post_content" rows="3" required></textarea>
             <div>
         </div>
+
+        <button type="submit" class="btn btn-primary" name="create_new_post">Create post</button>
     </form>
     <?php
       }
