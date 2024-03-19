@@ -47,13 +47,13 @@
     <p><strong>Title:</strong> <?= $post_title ?></p>
     <p><strong>Date:</strong> <?= $post_date ?></p>
     <p><strong>Content:</strong></p>
-    <!-- markdown to html -->
     <?php
         require_once('../Parsedown.php');
         $Parsedown = new Parsedown();
         $Parsedown->setSafeMode(true);
-        echo $Parsedown->text($post_content);
+        $parsedContent = $Parsedown->text($post_content);
     ?>
+    <textarea disabled><?php echo $parsedContent; ?></textarea>
 
     <?php
         }
