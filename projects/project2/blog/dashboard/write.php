@@ -41,7 +41,6 @@
                     E_USER_ERROR);
             
             $display_add_student_form = false;
-        }
     ?>
     
     <h2>Post successfully created!</h2>
