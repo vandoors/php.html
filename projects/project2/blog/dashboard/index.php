@@ -11,10 +11,6 @@
 </head>
 <body>
     <h1>Blog</h1>
-    <nav>
-        <ul>
-            <li><a href="write.php">New post</a></li>
-        </ul>
-    </nav>
+    
 </body>
 </html>
