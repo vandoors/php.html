@@ -44,16 +44,35 @@
     <h1>Post successfully created!</h1>
     <p>The below post data has been added to the database.</p>
     <hr>
-    <p><strong>Title:</strong> <?= $post_title ?></p>
-    <p><strong>Date:</strong> <?= $post_date ?></p>
-    <p><strong>Content:</strong></p>
-    <?php
-        require_once('../Parsedown.php');
-        $Parsedown = new Parsedown();
-        $Parsedown->setSafeMode(true);
-        $parsedContent = $Parsedown->text($post_content);
-    ?>
-    <textarea disabled><?php echo $parsedContent; ?></textarea>
+
+    <form>
+        <div class="form-group">
+            <div class="form-group-header">
+                <label for="postTitle" class="form-label">Title</label>
+            </div>
+            <div class="form-group-body">
+                <input type="text" maxlength="255" class="form-control" id="postTitle" name="post_title" placeholder="New post" value="<?= isset($_POST['post_title']) ? htmlspecialchars($_POST['post_title']) : '' ?>" disabled>
+            <div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group-header">
+                <label for="postDate" class="form-label">Date</label>
+            </div>
+            <div class="form-group-body">
+                <input type="date" class="form-control" id="postDate" name="post_date" value="<?= isset($_POST['post_date']) ? htmlspecialchars($_POST['post_date']) : '' ?>" disabled>
+            <div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group-header">
+                <label for="postContent" class="form-label">Content</label>
+            </div>
+            <div class="form-group-body">
+                <textarea class="form-control" id="postContent" name="post_content" rows="3" value="<?= isset($_POST['post_content']) ? htmlspecialchars($_POST['post_content']) : '' ?>" disabled></textarea>
+            <div>
+        </div>
+    </form>
 
     <?php
         }
