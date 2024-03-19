@@ -38,7 +38,7 @@
             <?php
                 while($row = mysqli_fetch_assoc($result))
                 {
-                    echo '<tr class="border border-gray-light">';
+                    echo '<tr class="border border-gray-light p-3">';
                     echo '<td><a href="post.php?id=' . $row['id'] . '">' . $row['title'] . '</a></td>';
                     echo '<td>' . $row['date'] . '</td>';
                     echo '</tr>';
