@@ -39,6 +39,20 @@
                 or trigger_error(
                     'Error querying database: failed to create post.',
                     E_USER_ERROR);
+            
+            $display_add_student_form = false;
+        }
+    ?>
+    
+    <h2>Post successfully created!</h2>
+    <p>The following post has been added to the database:</p>
+    <hr>
+    <p><strong>Title:</strong> <?= $post_title ?></p>
+    <p><strong>Date:</strong> <?= $post_date ?></p>
+    <p><strong>Content:</strong></p>
+    <p><?= $post_content ?></p>
+
+    <?php
         }
 
         if ($display_new_post_form)
