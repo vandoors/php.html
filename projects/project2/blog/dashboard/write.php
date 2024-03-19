@@ -40,7 +40,7 @@
                     'Error querying database: failed to create post.',
                     E_USER_ERROR);
             
-            $display_add_student_form = false;
+            $display_new_post_form = false;
     ?>
     
     <h2>Post successfully created!</h2>
