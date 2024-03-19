@@ -30,10 +30,15 @@
                     or trigger_error(
                             'Error connecting to MySQL server for' . DB_NAME, 
                             E_USER_ERROR);
-
-            echo "<p>$post_title</p>";
-            echo "<p>$post_date</p>";
-            echo "<p>$post_content</p>";
+            
+            $query = "INSERT INTO posts (title, date, content) " 
+                    . " VALUES ('$post_title', '$post_date', "
+                    . "'$post_content')";
+            
+            mysqli_query($dbc, $query)
+                or trigger_error(
+                    'Error querying database: failed to create post.',
+                    E_USER_ERROR);
         }
 
         if ($display_new_post_form)
