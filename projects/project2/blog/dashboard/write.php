@@ -47,7 +47,13 @@
     <p><strong>Title:</strong> <?= $post_title ?></p>
     <p><strong>Date:</strong> <?= $post_date ?></p>
     <p><strong>Content:</strong></p>
-    <p><?= $post_content ?></p>
+    <!-- markdown to html -->
+    <?php
+        require_once('../Parsedown.php');
+        $parsedown = new Parsedown();
+        $Parsedown->setSafeMode(true);
+        echo $parsedown->text($post_content);
+    ?>
 
     <?php
         }
