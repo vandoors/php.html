@@ -33,12 +33,12 @@
         
         if (mysqli_num_rows($result) > 0):
     ?>
-    <table class="table width-full border border-gray-light table-striped">
+    <table class="table width-full">
         <tbody>
             <?php
                 while($row = mysqli_fetch_assoc($result))
                 {
-                    echo '<tr>';
+                    echo '<tr class="border border-gray-light">';
                     echo '<td><a href="post.php?id=' . $row['id'] . '">' . $row['title'] . '</a></td>';
                     echo '<td>' . $row['date'] . '</td>';
                     echo '</tr>';
