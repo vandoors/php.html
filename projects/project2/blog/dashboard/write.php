@@ -50,9 +50,9 @@
     <!-- markdown to html -->
     <?php
         require_once('../Parsedown.php');
-        $parsedown = new Parsedown();
+        $Parsedown = new Parsedown();
         $Parsedown->setSafeMode(true);
-        echo $parsedown->text($post_content);
+        echo $Parsedown->text($post_content);
     ?>
 
     <?php
