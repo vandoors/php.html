@@ -10,10 +10,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    <?php
+        if if (!$display_new_post_form && isset($post_title))
+        {
+    ?>
+    <title>New: "<?= $post_title ?>"</title>
+    <?php
+        }
+        else 
+        {
+    ?>
     <title>New blog post</title>
+    <?php
+        }
+    ?>
 </head>
 <body>
-    <h1>New blog post</h1>
     <?php
         $display_new_post_form = true;
 
@@ -43,7 +55,7 @@
             $display_new_post_form = false;
     ?>
     
-    <h2>Post successfully created!</h2>
+    <h1>Post successfully created!</h1>
     <p>The following post has been added to the database:</p>
     <hr>
     <p><strong>Title:</strong> <?= $post_title ?></p>
@@ -57,6 +69,7 @@
         if ($display_new_post_form)
         {
     ?>
+    <h1>New blog post</h1>
     <form class="needs-validation" novalidate method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
         <div class="mb-3">
             <label for="postTitle" class="form-label">Title</label>
