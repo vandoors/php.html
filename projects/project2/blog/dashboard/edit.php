@@ -83,6 +83,7 @@
         <div class="form-group">
             <div class="form-group-header">
                 <label for="postContent" class="form-label">Content</label>
+                <p class="color-fg-muted">Post content is to be written in markdown. See the markdown <a href="https://www.markdownguide.org/basic-syntax/" target="_blank" rel="noopener noreferrer">basic syntax</a> for more information.</p>
             </div>
             <div class="form-group-body">
                 <textarea class="form-control" id="postContent" name="post_content" rows="3"><?=$post_content?></textarea>
