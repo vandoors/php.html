@@ -14,7 +14,7 @@
 <body class="m-6">
     <h1 class="h2">Dashboard</h1>
     <p>Welcome to the blog dashboard. Here you can create, edit, and delete posts.</p>
-    <a href="write.php" class="btn btn-primary btn-sm my-2">New post</a>
+    <a href="publish.php" class="btn btn-primary btn-sm my-2">New post</a>
 
     <h2 class="h3 mt-6">Posts</h2>
     <?php
@@ -38,10 +38,11 @@
             <?php
                 while($row = mysqli_fetch_assoc($result))
                 {
-                    echo '<tr class="border border-gray-light p-3">';
-                    echo '<td><a href="post.php?id=' . $row['id'] . '">' . $row['title'] . '</a></td>';
-                    echo '<td>' . $row['date'] . '</td>';
-                    echo '</tr>';
+                    echo '<div>';
+                    echo '<a href="edit.php?id=' . $row['id'] . '" class="btn btn-sm">' . 'Edit</a>';
+                    echo '<span>' . $row['title'] . '</span>';
+                    echo '<span>' . $row['date'] . '</span>';
+                    echo '</div>';
                 }
             ?>
         </tbody>
