@@ -21,7 +21,7 @@
 <body class="m-6">
     <h1 class="h2">Dashboard</h1>
     <p>Welcome to the blog dashboard. Here you can create, edit, and delete posts.</p>
-    <a href="publish.php" class="btn btn-primary btn-sm my-2">New post</a>
+    <a href="publish.php" class="btn btn-primary my-2">New post</a>
 
     <h2 class="h3 mt-6">Posts</h2>
     <?php
