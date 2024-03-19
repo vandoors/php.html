@@ -10,6 +10,13 @@
     <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet">
 
     <title>Blog dashboard</title>
+
+    <style>
+        .post-title {
+            display: inline-block;
+            width: 33%;
+        }
+    </style>
 </head>
 <body class="m-6">
     <h1 class="h2">Dashboard</h1>
@@ -40,7 +47,7 @@
                 {
                     echo '<div class="my-3">';
                     echo '<a href="edit.php?id=' . $row['id'] . '" class="btn btn-sm mr-2">' . 'Edit</a>';
-                    echo '<span class="mr-2">' . $row['title'] . '</span>';
+                    echo '<span class="post-title mr-2">' . $row['title'] . '</span>';
                     echo '<span>' . $row['date'] . '</span>';
                     echo '</div>';
                 }
