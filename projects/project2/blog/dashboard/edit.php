@@ -67,7 +67,7 @@
                 <label for="postTitle" class="form-label">Title</label>
             </div>
             <div class="form-group-body">
-                <input type="text" maxlength="255" class="form-control" id="postTitle" name="post_title" placeholder="New post" value="<?= isset($_POST['post_title']) ? htmlspecialchars($_POST['post_title']) : '' ?>">
+                <input type="text" maxlength="255" class="form-control" id="postTitle" name="post_title" placeholder="New post" value="<?=$post_title?>">
             <div>
         </div>
 
@@ -76,7 +76,7 @@
                 <label for="postDate" class="form-label">Date</label>
             </div>
             <div class="form-group-body">
-                <input type="date" class="form-control" id="postDate" name="post_date" value="<?= isset($_POST['post_date']) ? htmlspecialchars($_POST['post_date']) : '' ?>">
+                <input type="date" class="form-control" id="postDate" name="post_date" value="<?=$post_date?>">
             <div>
         </div>
 
@@ -85,7 +85,7 @@
                 <label for="postContent" class="form-label">Content</label>
             </div>
             <div class="form-group-body">
-                <textarea class="form-control" id="postContent" name="post_content" rows="3"><?= isset($_POST['post_content']) ? htmlspecialchars($_POST['post_content']) : '' ?></textarea>
+                <textarea class="form-control" id="postContent" name="post_content" rows="3">value="<?=$post_content?>"</textarea>
             <div>
         </div>
 
