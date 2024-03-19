@@ -12,7 +12,7 @@
     <title>Blog dashboard</title>
 </head>
 <body class="m-6">
-    <h1>Blog</h1>
+    <h1 class="h2">Dashboard</h1>
     <a href="write.php" class="btn">New post</a>
 </body>
 </html>
