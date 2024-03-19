@@ -14,7 +14,7 @@
     <style>
         .post-title {
             display: inline-block;
-            width: 33%;
+            width: 250px;
         }
     </style>
 </head>
@@ -48,7 +48,7 @@
                     echo '<div class="my-3">';
                     echo '<a href="edit.php?id=' . $row['id'] . '" class="btn btn-sm mr-2">' . 'Edit</a>';
                     echo '<span class="post-title mr-2">' . $row['title'] . '</span>';
-                    echo '<span>' . $row['date'] . '</span>';
+                    echo '<span class="color-fg-muted">' . $row['date'] . '</span>';
                     echo '</div>';
                 }
             ?>
