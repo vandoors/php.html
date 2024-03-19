@@ -33,7 +33,7 @@
         
         if (mysqli_num_rows($result) > 0):
     ?>
-    <table>
+    <table class="table width-full border border-gray-light table-striped">
         <tbody>
             <?php
                 while($row = mysqli_fetch_assoc($result))
