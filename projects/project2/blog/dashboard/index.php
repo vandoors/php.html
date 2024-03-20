@@ -14,7 +14,7 @@
     <style>
         .post-title {
             display: inline-block;
-            width: 250px;
+            width: 300px;
         }
     </style>
 </head>
