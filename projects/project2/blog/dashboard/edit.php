@@ -92,7 +92,7 @@
 
         <div class="form-group">
             <button type="submit" class="btn" name="update_post">Update post</button>
-            <a href="delete.php?<?=$id?>" class="btn btn-danger">Delete post</a>
+            <a href="delete.php?id=<?=$id?>" class="btn btn-danger">Delete post</a>
         </div>
 
         <input type="hidden" name="id" value="<?= $id ?>">
