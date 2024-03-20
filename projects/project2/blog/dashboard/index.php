@@ -18,6 +18,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            vertical-align: baseline;
         }
     </style>
 </head>
