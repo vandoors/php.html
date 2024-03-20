@@ -35,7 +35,7 @@
                 $post_content = $row['content'];
             }
         }
-        elseif (isset($_POST['[update_post]'], $_POST['post_title'],
+        elseif (isset($_POST['update_post'], $_POST['post_title'],
                         $_POST['post_date'], $_POST['post_content']))
         {
             $id = $_POST['id'];
