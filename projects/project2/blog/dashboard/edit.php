@@ -43,11 +43,13 @@
             $post_date = $_POST['post_date'];
             $post_content = $_POST['post_content'];
 
-            $query = "UPDATE posts SET title = '$post_title', "
-                    . " date = '$post_date', content = '$post_content' "
-                    . "WHERE id = $id";
+            $query = "UPDATE posts SET title = ?, date = ?, content = ? WHERE id = ?";
 
-            mysqli_query($dbc, $query)
+            $stmt = mysqli_prepare($dbc, $query);
+
+            mysqli_stmt_bind_param($stmt, 'sssi', $post_title, $post_date, $post_content, $id);
+
+            mysqli_stmt_execute($stmt)
                 or trigger_error(
                     'Error querying database: failed to update post.',
                     E_USER_ERROR);
