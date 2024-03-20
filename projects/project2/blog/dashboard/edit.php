@@ -60,7 +60,7 @@
             header("Location: index.php");
         }
     ?>
-    <h1 class="h2">Edit blog post</h1>
+    <h1 class="h2">Edit post</h1>
     <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
         <div class="form-group">
             <div class="form-group-header">
@@ -90,7 +90,10 @@
             <div>
         </div>
 
-        <button type="submit" class="btn mt-3" name="update_post">Update post</button>
+        <div class="form-group">
+            <button type="submit" class="btn" name="update_post">Update post</button>
+            <a href="delete.php?<?=$id?>" class="btn btn-danger">Delete post</a>
+        </div>
 
         <input type="hidden" name="id" value="<?= $id ?>">
     </form>
