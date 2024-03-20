@@ -40,20 +40,16 @@
         
         if (mysqli_num_rows($result) > 0):
     ?>
-    <table class="table width-full">
-        <tbody>
-            <?php
-                while($row = mysqli_fetch_assoc($result))
-                {
-                    echo '<div class="my-3">';
-                    echo '<a href="edit.php?id=' . $row['id'] . '" class="btn btn-sm mr-2">' . 'Edit</a>';
-                    echo '<span class="post-title mr-2">' . $row['title'] . '</span>';
-                    echo '<span class="color-fg-muted">' . $row['date'] . '</span>';
-                    echo '</div>';
-                }
-            ?>
-        </tbody>
-    </table>
+    <?php
+        while($row = mysqli_fetch_assoc($result))
+        {
+            echo '<div class="my-3">';
+            echo '<a href="edit.php?id=' . $row['id'] . '" class="btn btn-sm mr-2">' . 'Edit</a>';
+            echo '<span class="post-title mr-2">' . $row['title'] . '</span>';
+            echo '<span class="color-fg-muted">' . $row['date'] . '</span>';
+            echo '</div>';
+        }
+    ?>
     <?php
         else:
     ?>
