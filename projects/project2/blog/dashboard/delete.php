@@ -42,7 +42,7 @@
         if (mysqli_num_rows($result) == 1):
             $row = mysqli_fetch_assoc($result);
     ?>
-        <form>
+        <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
             <div class="form-group">
                 <div class="form-group-header">
                     <label for="postTitle" class="form-label">Title</label>
