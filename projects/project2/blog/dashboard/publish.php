@@ -110,7 +110,9 @@
             <div>
         </div>
 
-        <button type="submit" class="btn btn-primary mt-3" name="create_new_post">Create post</button>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary mt-3" name="create_new_post">Create post</button>
+        </div>
     </form>
     <?php
       }
