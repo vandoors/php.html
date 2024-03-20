@@ -6,16 +6,6 @@
 
     <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet">
 
-    <title>Blog</title>
-
-    <style>
-        .post-title {
-            display: inline-block;
-            width: 250px;
-        }
-    </style>
-</head>
-<body class="m-6">
     <?php
         if (isset($_GET['id']))
         {
@@ -49,6 +39,10 @@
             header("Location: index.php");
         }
     ?>
+
+    <title><?=$post_title?></title>
+</head>
+<body class="m-6">
     <h1 class="h2"><?=$post_title?></h1>
     <time datetime="<?=$post_date?>" class="color-fg-muted"><?=$post_date?></time>
     <hr>
