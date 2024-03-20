@@ -48,7 +48,7 @@
             $display_new_post_form = false;
     ?>
     
-    <a href="../index.php" class="color-fg-primary">
+    <a href="../dashboard/" class="color-fg-primary">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M9.78 12.78a.75.75 0 0 1-1.06 0L4.47 8.53a.75.75 0 0 1 0-1.06l4.25-4.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L6.06 8l3.72 3.72a.75.75 0 0 1 0 1.06Z"></path></svg>
     </a>
     <h1 class="h2">Post successfully created!</h1>
@@ -90,7 +90,7 @@
         if ($display_new_post_form)
         {
     ?>
-    <a href="../index.php" class="color-fg-primary">
+    <a href="../dashboard/" class="color-fg-primary">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M9.78 12.78a.75.75 0 0 1-1.06 0L4.47 8.53a.75.75 0 0 1 0-1.06l4.25-4.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L6.06 8l3.72 3.72a.75.75 0 0 1 0 1.06Z"></path></svg>
     </a>
     <h1 class="h2">New blog post</h1>
