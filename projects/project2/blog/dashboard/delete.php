@@ -84,10 +84,6 @@
         <h3>No post details availabe.</h3>
     <?php
         endif;
-
-        else:
-            header("Location: ../dashboard/");
-        endif;
     ?>
 </body>
 </html>
