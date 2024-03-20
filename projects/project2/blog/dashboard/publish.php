@@ -53,7 +53,6 @@
     </a>
     <h1 class="h2">Post successfully created!</h1>
     <p>The below post data has been added to the database.</p>
-    <hr>
 
     <form>
         <div class="form-group">
