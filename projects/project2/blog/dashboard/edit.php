@@ -52,7 +52,7 @@
                     'Error querying database: failed to update post.',
                     E_USER_ERROR);
         
-            $nav_link = '../';
+            $nav_link = '../dashboard/';
             header("Location: $nav_link");
         }
         else
