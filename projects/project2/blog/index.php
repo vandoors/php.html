@@ -39,8 +39,8 @@
         while($row = mysqli_fetch_assoc($result))
         {
             echo '<div class="my-3">';
-            echo '<span class="color-fg-muted">' . $row['date'] . '</span>';
-            echo '<a href="post.php?id=' . $row['id'] . '" class="post-title mr-2">' . $row['title'] . '</a>';
+            echo '<span class="color-fg-muted  mr-2">' . $row['date'] . '</span>';
+            echo '<a href="post.php?id=' . $row['id'] . '" class="post-title">' . $row['title'] . '</a>';
             echo '</div>';
         }
     ?>
