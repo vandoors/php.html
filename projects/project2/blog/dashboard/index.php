@@ -15,6 +15,9 @@
         .post-title {
             display: inline-block;
             width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     </style>
 </head>
