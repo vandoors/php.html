@@ -11,5 +11,7 @@
 <body class="m-6">
     <h1 class="h2">Blog</h1>
     <p>Welcome to our blog. Here you can read all our posts. Enjoy!</p>
+    <hr>
+    
 </body>
 </html>
