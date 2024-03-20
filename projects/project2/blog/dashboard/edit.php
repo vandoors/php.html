@@ -10,6 +10,12 @@
     <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet">
 
     <title>Edit post</title>
+
+    <style>
+        .color-fg-primary svg {
+            fill: var(--color-accent-fg);
+        }
+    </style>
 </head>
 <body class="m-6">
     <?php
