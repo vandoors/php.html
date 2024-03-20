@@ -18,7 +18,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            vertical-align: baseline;
+            vertical-align: middle;
         }
     </style>
 </head>
