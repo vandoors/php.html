@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet">
+
     <title>Blog</title>
 </head>
-<body>
-    <h1>Blog</h1>
+<body class="m-6">
 </body>
 </html>
