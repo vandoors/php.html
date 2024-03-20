@@ -25,14 +25,16 @@
             $post_content = $_POST['post_content'];
 
             $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
-                        or trigger_error('Error connecting to MySQL server for'
-                        .  DB_NAME, E_USER_ERROR);
+                or trigger_error('Error connecting to MySQL server for'
+                .  DB_NAME, E_USER_ERROR);
+    
+            $query = "INSERT INTO posts (title, date, content) VALUES (?, ?, ?)";
             
-            $query = "INSERT INTO posts (title, date, content) " 
-                    . " VALUES ('$post_title', '$post_date', "
-                    . "'$post_content')";
+            $stmt = mysqli_prepare($dbc, $query);
             
-            mysqli_query($dbc, $query)
+            mysqli_stmt_bind_param($stmt, 'sss', $post_title, $post_date, $post_content);
+            
+            mysqli_stmt_execute($stmt)
                 or trigger_error(
                     'Error querying database: failed to create post.',
                     E_USER_ERROR);
