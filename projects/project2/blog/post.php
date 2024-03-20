@@ -6,6 +6,12 @@
 
     <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet">
 
+    <style>
+        .color-fg-primary svg {
+            fill: var(--color-accent-fg);
+        }
+    </style>
+
     <?php
         if (isset($_GET['id']))
         {
