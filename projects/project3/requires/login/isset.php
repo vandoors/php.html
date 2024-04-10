@@ -14,7 +14,7 @@ if (!empty($username) && !empty($password))
             E_USER_ERROR );
 
     // Check if user already exists
-    $query = "SELECT id, username, sh_password"
+    $query = "SELECT id, username, sh_password "
             . "FROM exercise_user WHERE username = ?";
 
     $results = parameterizedQuery($dbc, $query, 's', $username)
@@ -25,7 +25,7 @@ if (!empty($username) && !empty($password))
     {
         $row = mysqli_fetch_array($results);
 
-        if (password_verify($password, $row['password_hash']))
+        if (password_verify($password, $row['sh_password']))
         {
             $_SESSION['id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
