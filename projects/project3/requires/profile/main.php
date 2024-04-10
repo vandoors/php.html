@@ -38,28 +38,28 @@
             }
         ?>
 
-        <table>
-            <tr class="py-4">
+        <table style="border-spacing: seperate; border-spacing: 0 1em;">
+            <tr>
                 <td class="text-bold pr-3">Username:</td>
                 <td><?= $username ?></td>
             </tr>
-            <tr class="py-4">
+            <tr>
                 <td class="text-bold pr-3">First Name:</td>
                 <td><?= $first_name ?></td>
             </tr>
-            <tr class="py-4">
+            <tr>
                 <td class="text-bold pr-3">Last Name:</td>
                 <td><?= $last_name ?></td>
             </tr>
-            <tr class="py-4">
+            <tr>
                 <td class="text-bold pr-3">Birthdate:</td>
                 <td><?= $birthdate ?></td>
             </tr>
-            <tr class="py-4">
+            <tr>
                 <td class="text-bold pr-3">Gender:</td>
                 <td><?= $gender ?></td>
             </tr>
-            <tr class="py-4">
+            <tr>
                 <td class="text-bold pr-3">Weight:</td>
                 <td><?= $weight ?></td>
             </tr>
