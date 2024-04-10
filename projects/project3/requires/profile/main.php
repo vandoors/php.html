@@ -38,7 +38,7 @@
             }
         ?>
 
-        <table style="border-spacing: seperate; border-spacing: 0 1em;">
+        <table style="border-spacing: seperate !important; border-spacing: 0 1em !important;">
             <tr>
                 <td class="text-bold pr-3">Username:</td>
                 <td><?= $username ?></td>
