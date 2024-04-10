@@ -1,7 +1,7 @@
 <?php
     $show_sign_up_form = true;
 
-    if (isset($_POST['signup_submission']))
+    if (isset($_POST['create_profile']))
     {
         require_once('isset.php');
     }
