@@ -12,7 +12,8 @@
 
         $log_out = false;
 
-        if (!empty($_POST['username']) && $_POST['username'] !== $username) {
+        if (!empty($_POST['username']) && $_POST['username'] !== $username)
+        {
             $query = "UPDATE exercise_user SET username = ? WHERE id = ?";
 
             parameterizedQuery($dbc, $query, 'si', $_POST['username'], $id)
@@ -21,7 +22,8 @@
             $log_out = true;
         }
 
-        if (!empty($_POST['password'])) {
+        if (!empty($_POST['password']))
+        {
             $query = "UPDATE exercise_user SET sh_password = ? WHERE id = ?";
 
             $salted_hashed_password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -32,44 +34,55 @@
             $log_out = true;
         }
 
-        if (!empty($_POST['first_name']) && $_POST['first_name'] !== $first_name) {
+        if (!empty($_POST['first_name']) && $_POST['first_name'] !== $first_name)
+        {
             $query = "UPDATE exercise_user SET first_name = ? WHERE id = ?";
 
             parameterizedQuery($dbc, $query, 'si', $_POST['first_name'], $id)
                 or trigger_error(mysqli_error($dbc), E_USER_ERROR);
         }
 
-        if (!empty($_POST['last_name']) && $_POST['last_name'] !== $last_name) {
+        if (!empty($_POST['last_name']) && $_POST['last_name'] !== $last_name)
+        {
             $query = "UPDATE exercise_user SET last_name = ? WHERE id = ?";
 
             parameterizedQuery($dbc, $query, 'si', $_POST['last_name'], $id)
                 or trigger_error(mysqli_error($dbc), E_USER_ERROR);
         }
 
-        if (!empty($_POST['birthdate']) && $_POST['birthdate'] !== $birthdate) {
+        if (!empty($_POST['birthdate']) && $_POST['birthdate'] !== $birthdate)
+        {
             $query = "UPDATE exercise_user SET birthdate = ? WHERE id = ?";
 
             parameterizedQuery($dbc, $query, 'si', $_POST['birthdate'], $id)
                 or trigger_error(mysqli_error($dbc), E_USER_ERROR);
         }
 
-        if (!empty($_POST['gender']) && $_POST['gender'] !== $birthdate) {
+        if (!empty($_POST['gender']) && $_POST['gender'] !== $birthdate)
+        {
             $query = "UPDATE exercise_user SET gender = ? WHERE id = ?";
 
             parameterizedQuery($dbc, $query, 'si', $_POST['gender'], $id)
                 or trigger_error(mysqli_error($dbc), E_USER_ERROR);
         }
 
-        if (!empty($_POST['weight']) && $_POST['weight'] !== $weight) {
+        if (!empty($_POST['weight']) && $_POST['weight'] !== $weight)
+        {
             $query = "UPDATE exercise_user SET weight = ? WHERE id = ?";
 
             parameterizedQuery($dbc, $query, 'ii', $_POST['weight'], $id)
                 or trigger_error(mysqli_error($dbc), E_USER_ERROR);
         }
 
-        if ($log_out) {
+        if ($log_out)
+        {
             session_destroy();
             header('Location: /logout.php');
+        }
+        else
+        {
+            $home_url = dirname($_SERVER['PHP_SELF']);
+            header('Location: ' . $home_url);
         }
     }
 ?>
