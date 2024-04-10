@@ -38,7 +38,7 @@
             }
         ?>
 
-        <table style="border-collapse: seperate; border-spacing: 0 1em;">
+        <table style="border-collapse: separate; border-spacing: 0 1em;">
             <tr>
                 <td class="text-bold pr-3">Username:</td>
                 <td><?= $username ?></td>
