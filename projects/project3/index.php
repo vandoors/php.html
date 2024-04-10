@@ -17,7 +17,10 @@
             <?php if (!isset($_SESSION['id'])): ?>
                 <?php require_once('./requires/home/main.php'); ?>
             <?php else: ?>
-                <?php require_once('./requires/profile/main.php'); ?>
+                <div class="d-flex flex-column">
+                    <?= require_once('./requires/profile/main.php'); ?>
+                    <?= require_once('./requires/logger/main.php'); ?>
+                </div>
             <?php endif; ?>
         </main>
     </body>
