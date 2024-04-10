@@ -25,7 +25,7 @@
             </div>
             <div class="form-group-body">
                 <input type="password" maxlength="100" class="form-control" id="password" name="password" required>
-            <div>
+            </div>
         </div>
     </div>
 
@@ -56,7 +56,6 @@
         </div>
     </div>
 
-    <!-- gender -->
     <div class="form-group">
         <div class="form-group-header">
             <label for="gender" class="form-label">Gender</label>
