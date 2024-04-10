@@ -3,7 +3,7 @@
 
     if (isset($_POST['signup_submission']))
     {
-
+        require_once('./requires/signup/main.php');
     }
 
     if ($show_sign_up_form):
