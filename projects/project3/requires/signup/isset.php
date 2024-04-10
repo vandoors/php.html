@@ -17,7 +17,7 @@ if (
     && !empty($weight)
 )
 {
-    require_once('../../dbconnection.php');
+    require_once __DIR__ . '/../dbconnection.php';
 
     require_once('../../queryutils.php');
 
