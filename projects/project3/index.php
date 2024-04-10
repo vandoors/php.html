@@ -6,6 +6,6 @@
 <html>
     <?php require_once('./requires/head.php'); ?>
     <body>
-        hi
+        <?php require_once('./requires/header.php'); ?>
     </body>
 </html>
