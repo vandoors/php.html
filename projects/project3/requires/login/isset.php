@@ -1,9 +1,9 @@
 <?php
 // Get user name and password
-$user_name = $_POST['user_name'];
+$username = $_POST['username'];
 $password = $_POST['password'];
 
-if (!empty($user_name) && !empty($password))
+if (!empty($username) && !empty($password))
 {
     require_once __DIR__ . '/../dbconnection.php';
     require_once __DIR__ . '/../queryutils.php';
