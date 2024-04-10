@@ -17,8 +17,8 @@
             if (isset($_SESSION['id'])) {
                 $id = $_SESSION['id'];
 
-                $query = "SELECT 'id', 'username', 'first_name', 'last_name', 'birthdate', 'gender', 'weight' "
-                        . "FROM 'exercise_user' WHERE 'id' = ?";
+                $query = "SELECT id, username, first_name, last_name, birthdate, gender, weight "
+                        . "FROM exercise_user WHERE id = ?";
 
                 $results = parameterizedQuery($dbc, $query, 'i', $id)
                         or trigger_error(mysqli_error($dbc), E_USER_ERROR);
