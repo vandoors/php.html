@@ -13,6 +13,7 @@
 
             <div>
                 <h2 class="h3">Log in</h2>
+                <?php require_once('./requires/login/main.php'); ?>
             </div>
 
             <div class="mt-3">
