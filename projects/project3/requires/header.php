@@ -14,7 +14,7 @@
                 <li class="d-inline-block"><a href=<?= dirname($_SERVER['PHP_SELF']) ?>>Home</a></li>
             <?php else: ?>
                 <a href=<?= dirname($_SERVER['PHP_SELF']) . '/profile' ?>>Profile</a>
-                <a href=<?= dirname($_SERVER['PHP_SELF']) . '/logout.php' ?>>Logout (<?=$_SESSION['username'] ?>)</a>
+                <a href=<?= dirname($_SERVER['PHP_SELF']) . '/logout.php' ?>><i>Logout (<?=$_SESSION['username'] ?>)</i></a>
             <?php endif; ?>
         </ul>
     </nav>
