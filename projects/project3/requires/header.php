@@ -14,7 +14,7 @@
             <?php if (!isset($_SESSION['username'])): ?>
                 <a href=<?= dirname($_SERVER['PHP_SELF']) . '/profile' ?>>Profile</a>
             <?php else: ?>
-                <a href=<?= dirname($_SERVER['PHP_SELF']) . 'logout.php' ?>>Logout (<?=$_SESSION['username'] ?>)</a>
+                <a href=<?= dirname($_SERVER['PHP_SELF']) . '/logout.php' ?>>Logout (<?=$_SESSION['username'] ?>)</a>
             <?php endif; ?>
         </ul>
     </nav>
