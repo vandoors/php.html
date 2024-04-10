@@ -23,7 +23,8 @@
                 $results = parameterizedQuery($dbc, $query, 'i', $id)
                         or trigger_error(mysqli_error($dbc), E_USER_ERROR);
                 
-                if (mysqli_num_rows($results) == 1) {
+                if (mysqli_num_rows($results) == 1)
+                {
                     $row = mysqli_fetch_assoc($results);
 
                     $id = $row['id'];
@@ -34,15 +35,34 @@
                     $gender = $row['gender'];
                     $weight = $row['weight'];
                 }
-
-                echo "id: $id<br>";
-                echo "username: $username<br>";
-                echo "first_name: $first_name<br>";
-                echo "last_name: $last_name<br>";
-                echo "birthdate: $birthdate<br>";
-                echo "gender: $gender<br>";
-                echo "weight: $weight<br>";
             }
         ?>
+
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td><?= $username ?></td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td><?= $first_name ?></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><?= $last_name ?></td>
+            </tr>
+            <tr>
+                <td>Birthdate:</td>
+                <td><?= $birthdate ?></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><?= $gender ?></td>
+            </tr>
+            <tr>
+                <td>Weight:</td>
+                <td><?= $weight ?></td>
+            </tr>
+        </table>
     </div>
 </div>
