@@ -48,36 +48,71 @@
                         $gender = 'Non-binary';
                     }
                 }
-
-                $page_title = "Welcome, $first_name";
             }
         ?>
 
-        <table style="border-collapse: separate; border-spacing: 0 1em;">
-            <tr>
-                <td class="text-bold pr-3">Username:</td>
-                <td><?= $username ?></td>
-            </tr>
-            <tr>
-                <td class="text-bold pr-3">First Name:</td>
-                <td><?= $first_name ?></td>
-            </tr>
-            <tr>
-                <td class="text-bold pr-3">Last Name:</td>
-                <td><?= $last_name ?></td>
-            </tr>
-            <tr>
-                <td class="text-bold pr-3">Birthdate:</td>
-                <td><?= $birthdate ?></td>
-            </tr>
-            <tr>
-                <td class="text-bold pr-3">Gender:</td>
-                <td><?= $gender ?></td>
-            </tr>
-            <tr>
-                <td class="text-bold pr-3">Weight:</td>
-                <td><?= $weight ?></td>
-            </tr>
-        </table>
+        <form>
+            <div class="form-group">
+                <div class="form-group-header">
+                    <label for="firstName" class="form-label">Username</label>
+                </div>
+                <div class="form-group-body">
+                    <input type="text" maxlength="24" class="form-control" id="username" name="username" value="<?=$username?>" disabled>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group-header">
+                    <label for="firstName" class="form-label">First Name</label>
+                </div>
+                <div class="form-group-body">
+                    <input type="text" maxlength="32" class="form-control" id="firstName" name="first_name" value="<?=$first_name?>" disabled>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group-header">
+                    <label for="lastName" class="form-label">Last Name</label>
+                </div>
+                <div class="form-group-body">
+                    <input type="text" maxlength="32" class="form-control" id="lastName" name="last_name" value="<?=$last_name?>" disabled>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group-header">
+                    <label for="birthdate" class="form-label">Birthdate</label>
+                </div>
+                <div class="form-group-body">
+                    <input type="date" class="form-control" id="birthdate" name="birthdate" value="<?=$birthdate?>" disabled>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group-header">
+                    <label for="gender" class="form-label">Gender</label>
+                </div>
+                <div class="form-group-body">
+                    <select class="form-control" id="gender" name="gender" disabled>
+                        <option value="M" <?php echo $gender == 'M' ? 'selected' : ''; ?>>Male</option>
+                        <option value="F" <?php echo $gender == 'F' ? 'selected' : ''; ?>>Female</option>
+                        <option value="N" <?php echo $gender == 'N' ? 'selected' : ''; ?>>Non-binary</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group-header">
+                    <label for="weight" class="form-label">Weight <span class="color-fg-muted">(lbs)</span></label>
+                </div>
+                <div class="form-group-body">
+                    <input type="number" min="1" max="999" class="form-control" id="weight" name="weight" value="<?=$weight?>" disabled>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary mt-3" name="create_profile">Create profile</button>
+            </div>
+        </form>
     </div>
 </div>
