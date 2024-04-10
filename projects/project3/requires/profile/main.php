@@ -51,6 +51,10 @@
             }
         ?>
 
+        <h2 class="h3">
+            Welcome, <?=$first_name?>
+        </h2>
+
         <form>
             <div class="form-group">
                 <div class="form-group-header">
@@ -111,7 +115,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary mt-3" name="create_profile">Create profile</button>
+                <button type="submit" class="btn mt-3" name="edit_profile">Edit profile</button>
             </div>
         </form>
     </div>
