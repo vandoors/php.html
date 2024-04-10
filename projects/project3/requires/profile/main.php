@@ -37,15 +37,15 @@
 
                     if ($gender == 'M')
                     {
-                        $gender == 'Male';
+                        $gender = 'Male';
                     }
                     else if ($gender == 'F')
                     {
-                        $gender == 'Female';
+                        $gender = 'Female';
                     }
                     else if ($gender == 'N')
                     {
-                        $gender == 'Non-binary';
+                        $gender = 'Non-binary';
                     }
                 }
             }
