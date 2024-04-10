@@ -35,7 +35,7 @@
         </div>
         <div class="form-group-body">
             <input type="text" maxlength="32" class="form-control" id="firstName" name="first_name" required>
-        <div>
+        </div>
     </div>
 
     <div class="form-group">
@@ -44,7 +44,7 @@
         </div>
         <div class="form-group-body">
             <input type="text" maxlength="32" class="form-control" id="lastName" name="last_name" required>
-        <div>
+        </div>
     </div>
 
     <div class="form-group">
@@ -53,7 +53,7 @@
         </div>
         <div class="form-group-body">
             <input type="date" class="form-control" id="birthdate" name="birthdate" required>
-        <div>
+        </div>
     </div>
 
     <!-- gender -->
@@ -67,7 +67,7 @@
                 <option value="F">Female</option>
                 <option value="N">Non-binary</option>
             </select>
-        <div>
+        </div>
     </div>
 
     <div class="form-group">
@@ -76,7 +76,7 @@
         </div>
         <div class="form-group-body">
             <input type="number" min="1" max="999" class="form-control" id="weight" name="weight" required>
-        <div>
+        </div>
     </div>
 
     <div class="form-group">
