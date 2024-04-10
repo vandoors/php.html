@@ -16,7 +16,7 @@
             </div>
             <div class="form-group-body">
                 <input type="text" maxlength="24" class="form-control" id="username" name="username" required>
-            <div>
+            </div>
         </div>
 
         <div class="form-group">
