@@ -1,11 +1,7 @@
 <?php
-    require_once('../requires/page-titles.php');
-    $page_title = EXC_PROFILE;
+    if (session_status() == PHP_SESSION_NONE)
+    {
+        session_start();
+    }
 ?>
-<!doctype html>
-<html>
-    <?php require_once('../requires/head.php'); ?>
-    <body>
-        profile
-    </body>
-</html>
+<p>welcome to your profile <?=$_SESSION['username'] ?></p>
