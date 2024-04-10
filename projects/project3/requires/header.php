@@ -11,7 +11,7 @@
     <nav>
         <ul>
             <li class="d-inline-block"><a href=<?= dirname($_SERVER['PHP_SELF']) ?>>Home</a></li>
-            <?php if (!isset($_SESSION['user_name'])): ?>
+            <?php if (!isset($_SESSION['username'])): ?>
                 <a href=<?= dirname($_SERVER['PHP_SELF']) . '/profile' ?>>Profile</a>
             <?php else: ?>
                 <a href=<?= dirname($_SERVER['PHP_SELF']) . 'logout.php' ?>>Logout (<?=$_SESSION['username'] ?>)</a>
