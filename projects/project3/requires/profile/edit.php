@@ -77,7 +77,7 @@
         if ($log_out)
         {
             session_destroy();
-            header('Location: /logout.php');
+            header('Location: logout.php');
         }
         else
         {
