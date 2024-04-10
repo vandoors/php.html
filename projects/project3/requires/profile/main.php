@@ -48,6 +48,8 @@
                         $gender = 'Non-binary';
                     }
                 }
+
+                $page_title = "Welcome, $first_name";
             }
         ?>
 
