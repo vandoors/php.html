@@ -3,7 +3,7 @@
     <nav>
         <ul>
             <li><a href=<?= dirname($_SERVER['PHP_SELF']) ?>>Home</a></li>
-            <li><a href="/profile/">Profile</a></li>
+            <li><a href=<?= dirname($_SERVER['PHP_SELF']) . '/profile' ?>>Profile</a></li>
         </ul>
     </nav>
 </header>
