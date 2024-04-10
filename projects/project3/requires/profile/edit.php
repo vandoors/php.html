@@ -14,12 +14,26 @@
 
         if (!empty($_POST['username']) && $_POST['username'] !== $username)
         {
-            $query = "UPDATE exercise_user SET username = ? WHERE id = ?";
+            $query = "SELECT * FROM exercise_user WHERE username = ?";
 
-            parameterizedQuery($dbc, $query, 'si', $_POST['username'], $id)
-                or trigger_error(mysqli_error($dbc), E_USER_ERROR);
-            
-            $log_out = true;
+            $results = parameterizedQuery($dbc, $query, 's', $username)
+                    or trigger_error(mysqli_error($dbc), E_USER_ERROR);
+
+            if (mysqli_num_rows($results) == 0)
+            {
+                $query = "UPDATE exercise_user SET username = ? WHERE id = ?";
+
+                parameterizedQuery($dbc, $query, 'si', $_POST['username'], $id)
+                    or trigger_error(mysqli_error($dbc), E_USER_ERROR);
+                
+                $log_out = true;
+            }
+            else
+            {
+                echo "<p class='color-fg-severe'>An account already exists for username "
+                    .  "<b>$username</b>; please use "
+                    .  "a different username.</p>";
+            }
         }
 
         if (!empty($_POST['password']))
