@@ -52,7 +52,7 @@ if (
     else // An account already exists for this user
     {
         echo "<p class='color-fg-severe'>An account already exists for username "
-                .  "<b'>$username</b>; please use "
+                .  "<b>$username</b>; please use "
                 .  "a different username.</p>";
 
     }
