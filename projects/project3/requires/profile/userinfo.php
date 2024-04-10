@@ -58,6 +58,6 @@
     </div>
 
     <div class="form-group">
-        <button type="submit" class="btn mt-3" name="to_edit_profile">Edit profile</button>
+        <button type="submit" class="btn btn-invisible mt-3" name="to_edit_profile">Edit profile</button>
     </div>
 </form>
