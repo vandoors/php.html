@@ -34,6 +34,19 @@
                     $birthdate = $row['birthdate'];
                     $gender = $row['gender'];
                     $weight = $row['weight'];
+
+                    if ($gender == 'M')
+                    {
+                        $gender == 'Male';
+                    }
+                    else if ($gender == 'F')
+                    {
+                        $gender == 'Female';
+                    }
+                    else if ($gender == 'N')
+                    {
+                        $gender == 'Non-binary';
+                    }
                 }
             }
         ?>
