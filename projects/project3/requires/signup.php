@@ -9,7 +9,7 @@
     if ($show_sign_up_form):
 ?>
 <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
-    <div class="mb-3">
+    <div class="mb-6">
         <div class="form-group">
             <div class="form-group-header">
                 <label for="firstName" class="form-label">Username</label>
