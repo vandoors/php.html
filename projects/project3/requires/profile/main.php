@@ -40,27 +40,27 @@
 
         <table>
             <tr>
-                <td>Username:</td>
+                <td class="text-bold pr-3">Username:</td>
                 <td><?= $username ?></td>
             </tr>
             <tr>
-                <td>First Name:</td>
+                <td class="text-bold pr-3">First Name:</td>
                 <td><?= $first_name ?></td>
             </tr>
             <tr>
-                <td>Last Name:</td>
+                <td class="text-bold pr-3">Last Name:</td>
                 <td><?= $last_name ?></td>
             </tr>
             <tr>
-                <td>Birthdate:</td>
+                <td class="text-bold pr-3">Birthdate:</td>
                 <td><?= $birthdate ?></td>
             </tr>
             <tr>
-                <td>Gender:</td>
+                <td class="text-bold pr-3">Gender:</td>
                 <td><?= $gender ?></td>
             </tr>
             <tr>
-                <td>Weight:</td>
+                <td class="text-bold pr-3">Weight:</td>
                 <td><?= $weight ?></td>
             </tr>
         </table>
