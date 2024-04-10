@@ -12,32 +12,6 @@
 
         $log_out = false;
 
-        if (!empty($_POST['username']) && $_POST['username'] !== $username)
-        {
-            $query = "SELECT * FROM exercise_user WHERE username = ?";
-
-            $results = parameterizedQuery($dbc, $query, 's', $username)
-                    or trigger_error(mysqli_error($dbc), E_USER_ERROR);
-
-            echo mysqli_num_rows($results);
-            
-            if (mysqli_num_rows($results) == 0)
-            {
-                $query = "UPDATE exercise_user SET username = ? WHERE id = ?";
-
-                parameterizedQuery($dbc, $query, 'si', $_POST['username'], $id)
-                    or trigger_error(mysqli_error($dbc), E_USER_ERROR);
-                
-                $log_out = true;
-            }
-            else
-            {
-                echo "<p class='color-fg-severe'>An account already exists for username "
-                    .  "<b>$username</b>; please use "
-                    .  "a different username.</p>";
-            }
-        }
-
         if (!empty($_POST['password']))
         {
             $query = "UPDATE exercise_user SET sh_password = ? WHERE id = ?";
@@ -110,7 +84,7 @@
                 <label for="firstName" class="form-label">Username</label>
             </div>
             <div class="form-group-body">
-                <input type="text" maxlength="24" class="form-control" id="username" name="username" value="<?=$username?>">
+                <input type="text" maxlength="24" class="form-control" id="username" name="username" value="<?=$username?>" disabled>
             </div>
         </div>
 
