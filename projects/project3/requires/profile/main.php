@@ -34,19 +34,6 @@
                     $birthdate = $row['birthdate'];
                     $gender = $row['gender'];
                     $weight = $row['weight'];
-
-                    if ($gender == 'M')
-                    {
-                        $gender = 'Male';
-                    }
-                    else if ($gender == 'F')
-                    {
-                        $gender = 'Female';
-                    }
-                    else if ($gender == 'N')
-                    {
-                        $gender = 'Non-binary';
-                    }
                 }
             }
         ?>
@@ -56,7 +43,7 @@
         </h2>
 
         <?php
-            if (isset($_POST['to_edit_profile']))
+            if (isset($_POST['to_edit_profile']) || isset($_POST['edit_profile']))
             {
                 require_once('edit.php');
             }
