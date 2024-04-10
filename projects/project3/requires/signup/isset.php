@@ -46,20 +46,19 @@ if (
                 or trigger_error(mysqli_error($dbc), E_USER_ERROR);
 
         // Display success message
-        echo "<h4><p class='text-success'>Thank you for signing up <strong>$username</strong>! Your new account has been successfully created.<br/>You're now ready to <a href='login.php'>log in</a>.</p></h4>";
+        echo "<p class='color-fg-success'>You must enter a value for all fields.</p>";
         $show_sign_up_form = false;
     }
     else // An account already exists for this user
     {
-        echo "<h4><p class='text-danger'>An account already exists for this username: "
-                .  "<span class='font-weight-bold'> ($username)</span>. Please use  "
-                .  "a different user name.</p></h4><hr/>";
+        echo "<p class='color-fg-severe'>An account already exists for username "
+                .  "<b'>$username</b>; please use "
+                .  "a different username.</p>";
 
     }
 }
 else
 {
     // Output error message
-    echo "<h4><p class='text-danger'>You must enter both a user name 
-        and password.</p></h4><hr/>";
+    echo "<p class='color-fg-severe'>You must enter a value for all fields.</p>";
 }
