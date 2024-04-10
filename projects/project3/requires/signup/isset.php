@@ -18,8 +18,7 @@ if (
 )
 {
     require_once __DIR__ . '/../dbconnection.php';
-
-    require_once('../../queryutils.php');
+    require_once __DIR__ . '/../queryutils.php';
 
     $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
             or trigger_error(
