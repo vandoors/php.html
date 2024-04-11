@@ -77,3 +77,36 @@
         </div>
     </form>
 </div>
+
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Exercise</th>
+                <th scope="col">Time (minutes)</th>
+                <th scope="col">Heart rate</th>
+                <th scope="col">Calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                $query = "SELECT `date`, `exercise_type`, `time_in_minutes`, `heartrate`, `calories` FROM exercise_log WHERE user_id = ?";
+
+                $results = parameterizedQuery($dbc, $query, 'i', $user_id)
+                    or trigger_error(mysqli_error($dbc), E_USER_ERROR);
+
+                while ($row = mysqli_fetch_array($results))
+                {
+                    echo '<tr>';
+                    echo '<td>' . $row['date'] . '</td>';
+                    echo '<td>' . $row['exercise_type'] . '</td>';
+                    echo '<td>' . $row['time_in_minutes'] . '</td>';
+                    echo '<td>' . $row['heartrate'] . '</td>';
+                    echo '<td>' . $row['calories'] . '</td>';
+                    echo '</tr>';
+                }
+            ?>
+        </tbody>
+    </table>
+</div>
