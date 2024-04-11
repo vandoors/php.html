@@ -79,14 +79,23 @@
 </div>
 
 <div>
+    <style>
+        table {
+            width: 100%;
+        }
+
+        thead {
+            padding: 1em 0;
+        }
+    </style>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">Date</th>
-                <th scope="col">Exercise</th>
-                <th scope="col">Time (minutes)</th>
-                <th scope="col">Heart rate</th>
-                <th scope="col">Calories</th>
+                <th class="h4" scope="col">Date</th>
+                <th class="h4" scope="col">Exercise</th>
+                <th class="h4" scope="col">Time (minutes)</th>
+                <th class="h4" scope="col">Heart rate</th>
+                <th class="h4" scope="col">Calories</th>
             </tr>
         </thead>
         <tbody>
