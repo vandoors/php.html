@@ -8,7 +8,8 @@
         $time_in_minutes = $_POST['time'];
         $heartrate = $_POST['heartrate'];
 
-        $calories = calculateCalories($weight, $age, $gender, $time_in_minutes, $heartrate);
+        $age_at_log = date_diff(date_create($birthdate), date_create($log_date))->y;
+        $calories = calculateCalories($weight, $age_at_log, $gender, $time_in_minutes, $heartrate);
 
         $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
             or trigger_error(
