@@ -79,17 +79,8 @@
 </div>
 
 <div>
-    <style>
-        table {
-            width: 100%;
-        }
-
-        thead {
-            padding: 1em 0;
-        }
-    </style>
-    <table class="table table-striped">
-        <thead>
+    <table class="table table-striped" style="width:100%;">
+        <thead style="padding: 1em 0;">
             <tr>
                 <th class="h4" scope="col">Date</th>
                 <th class="h4" scope="col">Exercise</th>
