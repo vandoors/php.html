@@ -79,8 +79,8 @@
 </div>
 
 <div>
-    <table class="table table-striped" style="width:100%;">
-        <thead style="padding: 1em 0;">
+    <table class="log-table">
+        <thead>
             <tr>
                 <th class="h4" scope="col">Date</th>
                 <th class="h4" scope="col">Exercise</th>

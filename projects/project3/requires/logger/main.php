@@ -4,7 +4,7 @@
         session_start();
     }
 ?>
-<div class="ml-auto" style="grid-column:2;">
+<div class="ml-auto logger">
     <?php
         require_once __DIR__ . '/../dbconnection.php';
         require_once __DIR__ . '/../queryutils.php';
