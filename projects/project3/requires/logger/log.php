@@ -73,7 +73,7 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary mt-3 ml-auto d-inline-block" name="log_exercise">Log exercise</button>
+            <button type="submit" class="btn btn-primary mt-3 ml-auto d-block" name="log_exercise">Log exercise</button>
         </div>
     </form>
 </div>
