@@ -1,11 +1,5 @@
 <?php
-    require_once('./requires/page-titles.php');
-    
-    if (!isset($_SESSION['username'])) {
-        $page_title = EXC_HOME;
-    } else {
-        $page_title = EXC_PROFILE;
-    }
+    $page_title = 'Exercise Logger';
 ?>
 <!doctype html>
 <html>
