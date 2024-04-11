@@ -91,7 +91,7 @@
         </thead>
         <tbody>
             <?php
-                $query = "SELECT `date`, `exercise_type`, `time_in_minutes`, `heartrate`, `calories` FROM exercise_log WHERE user_id = ?";
+                $query = "SELECT `date`, `exercise_type`, `time_in_minutes`, `heartrate`, `calories` FROM exercise_log WHERE user_id = ? ORDER BY `date` DESC";
 
                 $results = parameterizedQuery($dbc, $query, 'i', $user_id)
                     or trigger_error(mysqli_error($dbc), E_USER_ERROR);
