@@ -4,11 +4,11 @@
     gap: 3em;
 }
 
-.profile, .log-in {
+.profile {
     grid-column: 1;
 }
 
-.logger, .sign-up {
+.logger {
     grid-column: 2;
 }
 
