@@ -40,6 +40,7 @@
             </div>
             <div class="form-group-body">
                 <select class="form-control" id="exercise" name="exercise" required>
+                    <option value="" disabled selected>Select an exercise</option>
                     <option value="Walking">Walking</option>
                     <option value="Running">Running</option>
                     <option value="Cycling">Cycling</option>

@@ -62,6 +62,7 @@
         </div>
         <div class="form-group-body">
             <select class="form-control" id="gender" name="gender" required>
+                <option value="" disabled selected>Choose your gender</option>
                 <option value="M">Male</option>
                 <option value="F">Female</option>
                 <option value="N">Non-binary</option>
