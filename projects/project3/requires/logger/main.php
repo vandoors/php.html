@@ -40,7 +40,7 @@
         Exercise log
     </h2>
 
-    <div class="d-flex flex-row">
+    <div class="d-flex flex-column flex-wrap">
         <?php require_once('log.php') ?>
     </div>
 </div>
