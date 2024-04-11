@@ -91,6 +91,8 @@
         </thead>
         <tbody>
             <?php
+                require_once('deletelog.php');
+
                 $query = "SELECT `date`, `exercise_type`, `time_in_minutes`, `heartrate`, `calories` FROM exercise_log WHERE user_id = ? ORDER BY `date` DESC";
 
                 $results = parameterizedQuery($dbc, $query, 'i', $user_id)
