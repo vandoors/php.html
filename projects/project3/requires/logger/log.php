@@ -67,7 +67,7 @@
                 <label for="heartrate" class="form-label">Heart rate</label>
             </div>
             <div class="form-group-body">
-                <input type="number" min="1" max="255" class="form-control" id="heartrate" name="heartrate" required>
+                <input type="number" min="1" max="299" class="form-control" id="heartrate" name="heartrate" required>
             </div>
         </div>
 
