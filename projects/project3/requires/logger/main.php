@@ -41,6 +41,6 @@
     </h2>
 
     <div class="d-flex flex-row">
-        <?= require_once('log.php') ?>
+        <?php require_once('log.php') ?>
     </div>
 </div>
