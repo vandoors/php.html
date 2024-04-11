@@ -46,7 +46,7 @@ if (
                 or trigger_error(mysqli_error($dbc), E_USER_ERROR);
 
         // Display success message
-        echo "<p class='color-fg-success'>You must enter a value for all fields.</p>";
+        echo "<p class='color-fg-success'>Account created; you may now log in.</p>";
         $show_sign_up_form = false;
     }
     else // An account already exists for this user
