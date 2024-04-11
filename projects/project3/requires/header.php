@@ -12,7 +12,7 @@
         <ul>
             <li class="d-inline-block text-italic">We wish you the best on your fitness journey</li>
             <?php if (isset($_SESSION['username'])): ?>
-                <li class="d-inline-block pl-2"><a href=<?= dirname($_SERVER['PHP_SELF']) . '/logout.php' ?>>Logout <span class="text-italic">(<?=$_SESSION['username'] ?>)</span></a></li>
+                <li class="d-inline-block"><span class="mx-2">·</span><a href=<?= dirname($_SERVER['PHP_SELF']) . '/logout.php' ?>>Logout <span class="text-italic">(<?=$_SESSION['username'] ?>)</span></a></li>
             <?php endif; ?>
         </ul>
     </nav>
