@@ -4,7 +4,7 @@
         session_start();
     }
 ?>
-<div class="ml-auto logger">
+<div class="logger">
     <?php
         require_once __DIR__ . '/../dbconnection.php';
         require_once __DIR__ . '/../queryutils.php';
@@ -36,7 +36,7 @@
         }
     ?>
 
-    <h2 class="h3">
+    <h2 class="ml-auto h3">
         Exercise log
     </h2>
 

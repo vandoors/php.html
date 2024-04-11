@@ -24,7 +24,7 @@
                 or trigger_error(mysqli_error($dbc), E_USER_ERROR);
     }
 ?>
-<div>
+<div class="ml-auto">
     <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
         <div class="form-group">
             <div class="form-group-header">
