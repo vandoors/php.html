@@ -56,7 +56,7 @@
 
         <div class="form-group">
             <div class="form-group-header">
-                <label for="time" class="form-label">Time <span class="color-fg-muted">(minutes)</span></label>
+                <label for="time" class="form-label">Time <span class="color-fg-muted text-normal">(minutes)</span></label>
             </div>
             <div class="form-group-body">
                 <input type="number" min="1" max="10000" class="form-control" id="time" name="time" required>
