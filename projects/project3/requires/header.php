@@ -10,9 +10,9 @@
     <h1 class="h2"><?= $page_title ?></h1>
     <nav>
         <ul>
-            <li class="d-inline-block text-italic">Exercise today... exercise tomorrow.</li>
+            <li class="d-inline-block text-italic">We wish you the best on your fitness journey</li>
             <?php if (isset($_SESSION['username'])): ?>
-                <li class="d-inline-block"><a href=<?= dirname($_SERVER['PHP_SELF']) . '/logout.php' ?>>Logout <i>(<?=$_SESSION['username'] ?>)</i></a></li>
+                <li class="d-inline-block pl-2"><a href=<?= dirname($_SERVER['PHP_SELF']) . '/logout.php' ?>>Logout <span class="text-italic">(<?=$_SESSION['username'] ?>)</span></a></li>
             <?php endif; ?>
         </ul>
     </nav>
