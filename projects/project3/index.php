@@ -17,7 +17,7 @@
             <?php if (!isset($_SESSION['id'])): ?>
                 <?php require_once('./requires/home/main.php'); ?>
             <?php else: ?>
-                <div style="display:grid; grid-template-columns:1fr 2fr; gap:3em;>
+                <div style="display:grid; grid-template-columns:1fr 2fr; gap:3em;">
                     <?= require_once('./requires/profile/main.php'); ?>
                     <?= require_once('./requires/logger/main.php'); ?>
                 </div>
