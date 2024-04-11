@@ -36,7 +36,7 @@
         }
     ?>
 
-    <h2 class="ml-auto h3">
+    <h2 class="text-right h3">
         Exercise log
     </h2>
 
