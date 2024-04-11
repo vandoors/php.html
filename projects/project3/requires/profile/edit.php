@@ -77,7 +77,7 @@
     }
 ?>
 
-<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
+<form method="POST" action="<?= $_SERVER['REQUEST_URI'] ?>">
     <div class="mb-6">
         <div class="form-group">
             <div class="form-group-header">
