@@ -50,7 +50,7 @@
 
     <div class="form-group">
         <div class="form-group-header">
-            <label for="weight" class="form-label">Weight <span class="color-fg-muted">(lbs)</span></label>
+            <label for="weight" class="form-label">Weight <span class="color-fg-muted text-normal">(lbs)</span></label>
         </div>
         <div class="form-group-body">
             <input type="number" min="1" max="999" class="form-control" id="weight" name="weight" value="<?=$weight?>" disabled>
