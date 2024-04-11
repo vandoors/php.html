@@ -3,7 +3,7 @@
     To get started, please create a profile below. Otherwise, if you already have a profile, please log in.
 </p>
 
-<div class="d-flex flex-row flex-wrap home">
+<div class="d-flex flex-row mt-6 flex-wrap home">
     <div>
         <h2 class="h3">Create a profile</h2>
         <?php require_once('./requires/signup/main.php'); ?>
