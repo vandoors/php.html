@@ -93,7 +93,7 @@
             <?php
                 require_once('deletelog.php');
 
-                $query = "SELECT `date`, `exercise_type`, `time_in_minutes`, `heartrate`, `calories` FROM exercise_log WHERE user_id = ? ORDER BY `date` DESC";
+                $query = "SELECT `id`, `date`, `exercise_type`, `time_in_minutes`, `heartrate`, `calories` FROM exercise_log WHERE user_id = ? ORDER BY `date` DESC";
 
                 $results = parameterizedQuery($dbc, $query, 'i', $user_id)
                     or trigger_error(mysqli_error($dbc), E_USER_ERROR);
@@ -106,7 +106,7 @@
                     echo '<td>' . $row['time_in_minutes'] . '</td>';
                     echo '<td>' . $row['heartrate'] . '</td>';
                     echo '<td>' . $row['calories'] . '</td>';
-                    echo '<td>' . '<form action="' . $_SERVER['PHP_SELF'] . '" method="post"><input type="hidden" name="log_id" value="' . $id . '"><button type="submit" class="btn-link color-fg-danger" name="delete_log">Delete</button></form>' . '</td>';
+                    echo '<td>' . '<form action="' . $_SERVER['PHP_SELF'] . '" method="post"><input type="hidden" name="log_id" value="' . $row['id'] . '"><button type="submit" class="btn-link color-fg-danger" name="delete_log">Delete</button></form>' . '</td>';
                     echo '</tr>';
                 }
             ?>
