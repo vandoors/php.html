@@ -104,6 +104,7 @@
                     echo '<td>' . $row['time_in_minutes'] . '</td>';
                     echo '<td>' . $row['heartrate'] . '</td>';
                     echo '<td>' . $row['calories'] . '</td>';
+                    echo '<td>' . '<form action="' . $_SERVER['PHP_SELF'] . '" method="post"><input type="hidden" name="log_id" value="' . $id . '"><button type="submit" class="btn-link text-danger" name="delete_log">Delete</button></form>' . '</td>';
                     echo '</tr>';
                 }
             ?>
