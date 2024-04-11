@@ -16,6 +16,4 @@ if (isset($_POST['delete_log']))
 
     parameterizedQuery($dbc, $query, 'ii', $_POST['log_id'], $_SESSION['id'])
         or trigger_error(mysqli_error($dbc), E_USER_ERROR);
-
-    mysqli_close($dbc);
 }
