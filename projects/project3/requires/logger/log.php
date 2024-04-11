@@ -84,7 +84,7 @@
             <tr>
                 <th class="h4" scope="col">Date</th>
                 <th class="h4" scope="col">Exercise</th>
-                <th class="h4" scope="col">Time (minutes)</th>
+                <th class="h4" scope="col">Time <span class="color-fg-muted text-normal">(minutes)</span></th>
                 <th class="h4" scope="col">Heart rate</th>
                 <th class="h4" scope="col">Calories</th>
             </tr>
