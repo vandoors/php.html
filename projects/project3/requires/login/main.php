@@ -29,6 +29,6 @@
     </div>
 
     <div class="form-group">
-        <button type="submit" class="btn btn-primary mt-3" name="log_in">Log in</button>
+        <button type="submit" class="btn btn-outline mt-3" name="log_in">Log in</button>
     </div>
 </form>
