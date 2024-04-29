@@ -6,8 +6,8 @@ if (
    !empty($username)
    && !empty($password)
 ) {
-   require_once __DIR__ . './_lib/dbconnection.php';
-   require_once __DIR__ . './_lib/queryutils.php';
+   require_once __DIR__ . '../_lib/dbconnection.php';
+   require_once __DIR__ . '../_lib/queryutils.php';
 
    $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
       or trigger_error(

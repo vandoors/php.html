@@ -3,7 +3,7 @@ $page_title = 'Twitter - Sign Up';
 ?>
 <!doctype html>
 <html>
-<?php require_once('./partials/head.php'); ?>
+<?php require_once('../partials/head.php'); ?>
 
 <body>
    <?php if (!isset($_SESSION['id'])) : ?>
