@@ -7,7 +7,7 @@ $page_title = 'Twitter - Sign Up';
 
 <body>
    <?php if (!isset($_SESSION['id'])) : ?>
-      <?php require_once('./signup/page.php'); ?>
+      <?php require_once('signup/page.php'); ?>
    <?php else : ?>
       <?php
       $home_url = dirname($_SERVER['PHP_SELF']);
