@@ -5,5 +5,5 @@
    <title><?= $page_title ?></title>
 
    <script src="https://cdn.tailwindcss.com"></script>
-   <?php require_once('./globals.css.php'); ?>
+   <?php require_once('../globals.css.php'); ?>
 </head>
