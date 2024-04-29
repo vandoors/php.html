@@ -16,7 +16,7 @@ if (
       );
 
    // Check if user already exists
-   $query = "SELECT * FROM exercise_user WHERE username = ?";
+   $query = "SELECT * FROM twitter_user WHERE username = ?";
 
    $results = parameterizedQuery($dbc, $query, 's', $username)
       or trigger_error(mysqli_error($dbc), E_USER_ERROR);
@@ -27,7 +27,7 @@ if (
       $salted_hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
       // Insert all fields into the user table
-      $query = "INSERT INTO exercise_user (`username`, `sh_password`, `display_name`)"
+      $query = "INSERT INTO twitter_user (`username`, `sh_password`, `display_name`)"
          . "VALUES (?, ?, ?)";
 
       $results = parameterizedQuery($dbc, $query, 'sss', $username, $salted_hashed_password, $username)
