@@ -6,6 +6,6 @@
 
    <script src="https://cdn.tailwindcss.com"></script>
    <?php
-   require_once('/globals.css.php');
+   require_once('./../globals.css.php');
    ?>
 </head>
