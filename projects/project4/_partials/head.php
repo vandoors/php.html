@@ -6,7 +6,6 @@
 
    <script src="https://cdn.tailwindcss.com"></script>
    <?php
-   $home_url = $_SERVER['DOCUMENT_ROOT'];
-   require_once($home_url . '/globals.css.php');
+   require_once('/globals.css.php');
    ?>
 </head>
