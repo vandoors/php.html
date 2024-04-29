@@ -3,7 +3,7 @@ $page_title = 'Twitter - Log In';
 ?>
 <!doctype html>
 <html>
-<?php require_once('../_partials/head.php'); ?>
+<?php require_once('../head.php'); ?>
 
 <body>
    <?php if (!isset($_SESSION['id'])) : ?>
