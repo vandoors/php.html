@@ -7,7 +7,7 @@ $page_title = 'Twitter';
 
 <body>
     <?php if (!isset($_SESSION['id'])) : ?>
-        <?php require_once('./home/main.php'); ?>
+        <?php require_once('./home/page.php'); ?>
     <?php else : ?>
     <?php endif; ?>
 </body>
