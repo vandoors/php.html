@@ -3,7 +3,7 @@ $page_title = 'Twitter';
 ?>
 <!doctype html>
 <html>
-<?php require_once('_partials/head.php'); ?>
+<?php require_once('head.php'); ?>
 
 <body>
     <div className="flex w-full justify-center">
