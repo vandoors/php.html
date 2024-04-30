@@ -1,7 +1,7 @@
 <div>
    <?php
-   require_once('../_lib/dbconnection.php');
-   require_once('../_lib/queryutils.php');
+   require_once('../dbconnection.php');
+   require_once('../queryutils.php');
 
    $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
       or trigger_error(
