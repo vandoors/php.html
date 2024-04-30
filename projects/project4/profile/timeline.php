@@ -20,14 +20,6 @@
          $date = $row['date'];
          $content = $row['content'];
 
-         // Get tweet author info
-         $query2 = "SELECT `username`, `display_name` FROM twitter_user WHERE `id` = ?";
-         $result2 = parameterizedQuery($dbc, $query2, 'i', $user_id)
-            or trigger_error(mysqli_error($dbc), E_USER_ERROR);
-         $row2 = mysqli_fetch_array($result2);
-         $username = $row2['username'];
-         $display_name = $row2['display_name'];
-
          echo "<article class='px-3 pb-5 pt-3 border-b'>";
          echo "<header class='flex flex-row gap-1 pb-1'>";
          echo "<span class='font-medium'>$display_name</span>";
