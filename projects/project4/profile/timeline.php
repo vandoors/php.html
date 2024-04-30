@@ -10,11 +10,8 @@
       );
 
    $query = "SELECT `id`, `user_id`, `date`, `content` FROM twitter_tweet WHERE user_id = ? ORDER BY `date` DESC";
-   $result = mysqli_query($dbc, $query, 'i', $_GET['user'])
-      or trigger_error(
-         'Error querying database: failed to fetch tweets for this user.',
-         E_USER_ERROR
-      );
+   $result = parameterizedQuery($dbc, $query, 'i', $_GET['user'])
+      or trigger_error(mysqli_error($dbc), E_USER_ERROR);
 
    if (mysqli_num_rows($result) > 0) {
       while ($row = mysqli_fetch_array($result)) {
