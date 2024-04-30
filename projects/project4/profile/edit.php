@@ -13,8 +13,8 @@
    </form>
 
    <?php
-   if (isset($_POST['edit_profile']) && isset($_POST['content'])) {
-      require_once('/var/www/html/projects/project4/tweet.php');
+   if (isset($_POST['edit_profile'])) {
+      require_once('/var/www/html/projects/project4/profile/edit_isset.php');
    }
    ?>
 
