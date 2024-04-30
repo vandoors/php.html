@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Twitter - Log In';
+$page_title = 'Twitter - Profile';
 ?>
 <!doctype html>
 <html>
