@@ -3,7 +3,7 @@
 
    <?php
    if (isset($_POST['tweet']) && isset($_POST['content'])) {
-      require_once('../tweet.php');
+      require_once('/var/www/html/projects/project4/tweet.php');
    }
    ?>
    <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
