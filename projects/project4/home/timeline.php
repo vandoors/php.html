@@ -34,7 +34,7 @@
          echo "<article>";
          echo "<header class='flex flex-row gap-1'>";
          echo "<span class='font-medium'>$display_name</span>";
-         echo "<span class='text-gray-400'>@$username</span>";
+         echo "<span class='text-gray-500'>@$username</span>";
          echo "<span class='text-gray-600'>$date</span>";
          echo "</header>";
          echo "<p class='tweet-content'>$content</p>";
