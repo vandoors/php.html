@@ -23,12 +23,20 @@ $page_title = 'Twitter - Log In';
          <div class="w-2/3 min-h-dvh border-x pt-4 px-4">
             <?php if (isset($_GET['user'])) : ?>
                <?php
+               require_once('/var/www/html/projects/project4/dbconnection.php');
+               require_once('/var/www/html/projects/project4/queryutils.php');
+
                $query2 = "SELECT `username`, `display_name` FROM twitter_user WHERE `id` = ?";
                $result2 = parameterizedQuery($dbc, $query2, 'i', $_GET['user'])
                   or trigger_error(mysqli_error($dbc), E_USER_ERROR);
                $row2 = mysqli_fetch_array($result2);
-               $username = $row2['username'];
-               $display_name = $row2['display_name'];
+
+               if (mysqli_num_rows($result) == 0) {
+                  header("Location: ../");
+               } else {
+                  $username = $row2['username'];
+                  $display_name = $row2['display_name'];
+               }
                ?>
                <div class="text-center font-bold text-lg pb-4">@<?= $display_name ?></div>
                <?php require_once('timeline.php'); ?>
