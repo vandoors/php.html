@@ -25,6 +25,9 @@ if (!empty($username) && !empty($password)) {
       $row = mysqli_fetch_array($results);
 
       if (password_verify($password, $row['sh_password'])) {
+         if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+         }
          $_SESSION['id'] = $row['id'];
          $_SESSION['username'] = $row['username'];
 
