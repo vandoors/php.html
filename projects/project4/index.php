@@ -17,6 +17,7 @@ $page_title = 'Twitter';
                 <?php if (!isset($_SESSION['id'])) : ?>
                     <?php require_once('./home/default.php'); ?>
                 <?php else : ?>
+                    <?php require_once('./home/signedin.php'); ?>
                 <?php endif; ?>
             </aside>
             <div class="w-2/3 min-h-dvh border-x pt-4">
