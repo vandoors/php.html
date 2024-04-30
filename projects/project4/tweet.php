@@ -1,6 +1,7 @@
 <?php
 
 $content = $_POST['content'];
+$date = date('Y-m-d H:i:s');
 
 if (!empty($content)) {
    require_once('./dbconnection.php');
@@ -12,9 +13,9 @@ if (!empty($content)) {
          E_USER_ERROR
       );
 
-   $query = "INSERT INTO twitter_tweet (`user_id`, `content`)"
+   $query = "INSERT INTO twitter_tweet (`user_id`, `date`, `content`)"
       . "VALUES (?, ?)";
 
-   $results = parameterizedQuery($dbc, $query, 'is', $_SESSION['id'], $content)
+   $results = parameterizedQuery($dbc, $query, 'iss', $_SESSION['id'], $date, $content)
       or trigger_error(mysqli_error($dbc), E_USER_ERROR);
 }
