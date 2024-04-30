@@ -26,6 +26,12 @@ $page_title = 'Twitter - Log In';
                require_once('/var/www/html/projects/project4/dbconnection.php');
                require_once('/var/www/html/projects/project4/queryutils.php');
 
+               $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
+                  or trigger_error(
+                     'Error connecting to MySQL server for DB_NAME.',
+                     E_USER_ERROR
+                  );
+
                $query2 = "SELECT `username`, `display_name` FROM twitter_user WHERE `id` = ?";
                $result2 = parameterizedQuery($dbc, $query2, 'i', $_GET['user'])
                   or trigger_error(mysqli_error($dbc), E_USER_ERROR);
