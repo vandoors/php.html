@@ -49,6 +49,9 @@ $page_title = 'Twitter - Log In';
                ?>
                <div class="text-center font-bold text-lg pb-4">@<?= $username ?>'s recent posts</div>
                <?php require_once('timeline.php'); ?>
+            <?php elseif (empty($_GET)) : ?>
+               $user_id = $_SESSION['id'];
+               <?php require_once('timeline.php'); ?>
             <?php else : ?>
                <?php header("Location: ../"); ?>
             <?php endif; ?>
