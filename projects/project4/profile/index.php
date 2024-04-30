@@ -16,6 +16,8 @@ $page_title = 'Twitter - Log In';
             </a>
             <?php if (!isset($_SESSION['id'])) : ?>
                <?php require_once('../home/default.php'); ?>
+            <?php elseif (empty($_GET)) : ?>
+               <?php require_once('./edit.php'); ?>
             <?php else : ?>
                <?php require_once('../home/signedin.php'); ?>
             <?php endif; ?>
