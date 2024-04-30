@@ -22,7 +22,7 @@
 
          echo "<article class='px-3 pb-5 pt-3 border-b'>";
          echo "<header class='flex flex-row gap-2 pb-1'>";
-         echo "<span class='font-medium pl-2'>$display_name</span><span class='text-gray-500'>@$username</span>";
+         echo "<span class='font-medium pr-2'>$display_name</span><span class='text-gray-500'>@$username</span>";
          echo "<span class='text-gray-600'>$date</span>";
          echo "</header>";
          echo "<p class='tweet-content'>$content</p>";
