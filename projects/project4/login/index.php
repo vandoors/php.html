@@ -25,7 +25,7 @@ $page_title = 'Twitter - Log In';
             <?php if (!isset($_SESSION['id'])) : ?>
                <?php require_once('page.php'); ?>
             <?php else : ?>
-               <p>You are already logged in.</p>
+               <?php header('Location: /projects/project4/'); ?>
             <?php endif; ?>
          </div>
       </div>
