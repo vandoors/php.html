@@ -44,5 +44,5 @@ if (
    }
 } else {
    // Output error message
-   echo "<p>You must enter a value for all fields.</p>";
+   echo "<p class='text-yellow-600'>You must enter a value for all fields.</p>";
 }

@@ -8,25 +8,11 @@ if (empty($_SESSION['user_id']) && isset($_POST['log_in'])) {
 }
 ?>
 <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
-   <div class="form-group">
-      <div class="form-group-header">
-         <label for="firstName" class="form-label">Username</label>
-      </div>
-      <div class="form-group-body">
-         <input type="text" maxlength="24" class="form-control" id="username" name="username" required>
-      </div>
-   </div>
+   <label for="firstName" class="text-lg font-medium">Username</label>
+   <input type="text" maxlength="16" class="block mb-4 bg-gray-200 rounded-lg px-2 py-1" id="username" name="username" required>
 
-   <div class="form-group">
-      <div class="form-group-header">
-         <label for="firstName" class="form-label">Password</label>
-      </div>
-      <div class="form-group-body">
-         <input type="password" maxlength="100" class="form-control" id="password" name="password" required>
-      </div>
-   </div>
+   <label for="firstName" class="text-lg font-medium">Password</label>
+   <input type="password" maxlength="100" class="block mb-4 bg-gray-200 rounded-lg px-2 py-1" id="password" name="password" required>
 
-   <div class="form-group">
-      <button type="submit" class="btn btn-outline mt-3" name="log_in">Log in</button>
-   </div>
+   <button type="submit" class="block px-2 py-1 bg-sky-400 text-white hover:opacity-90 rounded-md" name="log_in">Log in</button>
 </form>
