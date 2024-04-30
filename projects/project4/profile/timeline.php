@@ -30,7 +30,7 @@
          if ($user_id == $_SESSION['id']) {
             echo "<form method='POST' action='" . $_SERVER['PHP_SELF'] . "'>";
             echo "<input type='hidden' name='tweet_id' value='$tweet_id'>";
-            echo "<button type='submit' class='text-gray-200 hover:text-red-500'>Delete</button>";
+            echo "<button type='submit' class='ml-auto text-gray-300 hover:text-red-500'>Delete</button>";
             echo "</form>";
          }
 
