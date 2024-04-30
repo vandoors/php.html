@@ -22,7 +22,12 @@ if (!empty($_POST['password'])) {
    $log_out = true;
 }
 
-if (!empty($_POST['username'])) {
+$query = "SELECT username FROM twitter_user WHERE id = ?";
+$results = parameterizedQuery($dbc, $query, 'i', $_SESSION['id'])
+   or trigger_error(mysqli_error($dbc), E_USER_ERROR);
+$row = mysqli_fetch_array($results);
+$current_username = $row['username'];
+if (!empty($_POST['username']) && $_POST['username'] != $current_username) {
    $query = "SELECT * FROM twitter_user WHERE username = ?";
 
    $username = $_POST['username'];
