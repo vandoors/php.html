@@ -30,10 +30,6 @@ if (!empty($username) && !empty($password)) {
          }
          $_SESSION['id'] = $row['id'];
          $_SESSION['username'] = $row['username'];
-
-         // Redirect to the home page
-         $home_url = dirname($_SERVER['PHP_SELF']);
-         header('Location: ' . $home_url);
       } else {
          echo "<p>An incorrect username or password was entered.</p>";
       }
