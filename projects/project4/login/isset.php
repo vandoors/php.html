@@ -14,8 +14,7 @@ if (!empty($username) && !empty($password)) {
       );
 
    // Check if user already exists
-   $query = "SELECT `id`, `admin`, `username`, `sh_password`, "
-      . "FROM `twitter_user` WHERE `username` = ?";
+   $query = "SELECT * FROM twitter_user WHERE username = ?";
 
    $results = parameterizedQuery($dbc, $query, 's', $username)
       or trigger_error(mysqli_error($dbc), E_USER_ERROR);
