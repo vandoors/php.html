@@ -4,11 +4,10 @@
    @tailwind utilities;
 
    :root {
-      font-family: Inter, sans-serif;
-      font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-   }
-
-   @supports (font-variation-settings: normal) {
-      :root { font-family: InterVariable, sans-serif; }
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings: "slnt" 0;
    }
 </style>
