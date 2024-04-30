@@ -12,11 +12,6 @@
       <button type="submit" class="block mt-2 px-4 py-2 bg-sky-400 text-white hover:opacity-90 rounded-md" name="tweet">Tweet</button>
    </form>
 
-   <div class="pt-2">
-      <a href="/projects/project4/profile" class="mt-6 block bg-black p-3 text-center text-lg text-white font-bold rounded-full hover:opacity-90">Profile</a>
-      <a href="/projects/project4/logout.php" class="mt-4 block border-black border-2 p-3 text-center text-lg font-bold rounded-full decoration-4 underline-offset-8 hover:underline">Log Out</a>
-   </div>
-
    <?php
    if (isset($_POST['edit_profile'])) {
       require_once('/var/www/html/projects/project4/profile/edit_isset.php');
@@ -53,4 +48,8 @@
 
       <button type="submit" class="block mt-2 px-4 py-2 bg-black text-white hover:opacity-90 rounded-md" name="edit_profile">Edit profile</button>
    </form>
+
+   <div class="pt-2">
+      <a href="/projects/project4/logout.php" class="mt-4 block border-black border-2 p-3 text-center text-lg font-bold rounded-full decoration-4 underline-offset-8 hover:underline">Log Out</a>
+   </div>
 </div>
