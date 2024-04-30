@@ -22,10 +22,10 @@ $page_title = 'Twitter - Log In';
          </aside>
          <div class="w-2/3 min-h-dvh border-x pt-4 px-4">
             <div class="text-center font-bold text-lg pb-4">Log in</div>
-            <?php if (isset($_GET['id'])) : ?>
+            <?php if (isset($_GET['user'])) : ?>
                <?php require_once('timeline.php'); ?>
             <?php else : ?>
-               <?php header("Location: ../index.php"); ?>
+               <p><?= $_GET['user'] ?></p>
             <?php endif; ?>
          </div>
       </div>
