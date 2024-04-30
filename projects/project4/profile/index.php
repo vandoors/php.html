@@ -44,7 +44,7 @@ $page_title = 'Twitter - Log In';
                   $display_name = $row2['display_name'];
                }
                ?>
-               <div class="text-center font-bold text-lg pb-4">@<?= $display_name ?></div>
+               <div class="text-center font-bold text-lg pb-4">@<?= $display_name ?>'s recent posts</div>
                <?php require_once('timeline.php'); ?>
             <?php else : ?>
                <?php header("Location: ../"); ?>
