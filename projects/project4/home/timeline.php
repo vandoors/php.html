@@ -12,6 +12,13 @@
             E_USER_ERROR
          );
 
+      if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) {
+         $query = "DELETE FROM twitter_tweet WHERE id = ?";
+         parameterizedQuery($dbc, $query, 'i', $tweet_id)
+            or trigger_error(mysqli_error($dbc), E_USER_ERROR);
+         return;
+      }
+
       $query_for_user_of_tweet_to_delete = "SELECT `user_id` FROM twitter_tweet WHERE id = ?";
       $result_for_user_of_tweet_to_delete = parameterizedQuery($dbc, $query_for_user_of_tweet_to_delete, 'i', $tweet_id)
          or trigger_error(mysqli_error($dbc), E_USER_ERROR);
@@ -63,7 +70,7 @@
          echo "</header>";
          echo "<p class='tweet-content'>$content</p>";
 
-         if (isset($_SESSION['id']) && $user_id == $_SESSION['id']) {
+         if ((isset($_SESSION['id']) && $user_id == $_SESSION['id']) || (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1)) {
             echo "<form method='POST' action='" . $_SERVER['PHP_SELF'] . "' class='pt-2'>";
             echo "<input type='hidden' name='tweet_id' value='$tweet_id'>";
             echo "<button type='submit' class='block ml-auto text-right text-gray-400 hover:text-red-500' name='delete_tweet'>Delete</button>";
