@@ -44,7 +44,7 @@
       <input type="text" maxlength="16" class="block mb-4 bg-gray-200 rounded-lg px-2 py-1" id="username" name="username" value="<?= $username ?>" required>
 
       <label for="password" class="text-lg font-medium">Password</label>
-      <input type="password" maxlength="100" class="block mb-4 bg-gray-200 rounded-lg px-2 py-1" id="password" name="password" required>
+      <input type="password" maxlength="100" class="block mb-4 bg-gray-200 rounded-lg px-2 py-1" id="password" name="password">
 
       <button type="submit" class="block mt-2 px-4 py-2 bg-black text-white hover:opacity-90 rounded-md" name="edit_profile">Edit profile</button>
    </form>
