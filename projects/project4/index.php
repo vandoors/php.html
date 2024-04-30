@@ -15,7 +15,7 @@ $page_title = 'Twitter';
                 <?php endif; ?>
             </aside>
             <div class="w-2/3 min-h-dvh border-x">
-                <p>test</p>
+                <?php require_once('./home/timeline.php'); ?>
             </div>
         </div>
     </div>
