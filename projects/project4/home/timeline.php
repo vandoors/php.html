@@ -32,7 +32,7 @@
          $display_name = $row2['display_name'];
 
          echo "<article class='px-3 pb-5 pt-3 border-b'>";
-         echo "<header class='flex flex-row gap-1'>";
+         echo "<header class='flex flex-row gap-1 pb-2'>";
          echo "<span class='font-medium'>$display_name</span>";
          echo "<span class='text-gray-500'>@$username</span>";
          echo "<span class='text-gray-600'>$date</span>";
