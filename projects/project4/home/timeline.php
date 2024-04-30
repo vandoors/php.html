@@ -79,7 +79,7 @@
          echo "</article>";
       }
    } else {
-      echo "<p>No tweets found.</p>";
+      echo "<p class='px-3 pt-3'>No tweets found.</p>";
    }
    ?>
 </div>
