@@ -3,7 +3,7 @@ $page_title = 'Twitter - Sign Up';
 ?>
 <!doctype html>
 <html>
-<?php require_once('head.php'); ?>
+<?php require_once('../head.php'); ?>
 
 <body>
    <div class="flex w-full justify-center">
