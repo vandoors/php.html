@@ -9,4 +9,10 @@
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
    <script src="https://cdn.tailwindcss.com"></script>
    <?php require_once('globals.css.php'); ?>
+
+   <?php
+   if (session_status() == PHP_SESSION_NONE) {
+      session_start();
+   }
+   ?>
 </head>
