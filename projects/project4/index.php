@@ -14,7 +14,7 @@ $page_title = 'Twitter';
                 <?php else : ?>
                 <?php endif; ?>
             </aside>
-            <div class="w-2/3">
+            <div class="w-2/3 border-x">
                 <p>test</p>
             </div>
         </div>
