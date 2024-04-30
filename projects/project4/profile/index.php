@@ -25,7 +25,7 @@ $page_title = 'Twitter - Log In';
             <?php if (isset($_GET['user'])) : ?>
                <?php require_once('timeline.php'); ?>
             <?php else : ?>
-               <p><?= $_GET['user'] ?></p>
+               <?php header("Location: ../"); ?>
             <?php endif; ?>
          </div>
       </div>
