@@ -18,7 +18,7 @@ $page_title = 'Twitter';
                 <?php endif; ?>
             </aside>
             <div class="w-2/3 min-h-dvh border-x pt-4">
-                <div class="text-center font-bold text-lg">Recent posts</div>
+                <div class="text-center font-bold text-lg pb-4">Recent posts</div>
                 <?php require_once('./home/timeline.php'); ?>
             </div>
         </div>
