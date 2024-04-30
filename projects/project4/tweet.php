@@ -14,7 +14,7 @@ if (!empty($content)) {
       );
 
    $query = "INSERT INTO twitter_tweet (`user_id`, `date`, `content`)"
-      . "VALUES (?, ?)";
+      . "VALUES (?, ?, ?)";
 
    $results = parameterizedQuery($dbc, $query, 'iss', $_SESSION['id'], $date, $content)
       or trigger_error(mysqli_error($dbc), E_USER_ERROR);
