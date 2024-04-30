@@ -25,8 +25,6 @@ $page_title = 'Twitter - Log In';
                <?php require_once('page.php'); ?>
             <?php else : ?>
                <?php
-               $home_url = dirname($_SERVER['PHP_SELF']);
-               header('Location: ' . $home_url);
                ?>
             <?php endif; ?>
          </div>
