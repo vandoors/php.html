@@ -31,7 +31,7 @@
          $username = $row2['username'];
          $display_name = $row2['display_name'];
 
-         echo "<article class='p-3 border-b'>";
+         echo "<article class='px-3 py-5 border-b'>";
          echo "<header class='flex flex-row gap-1'>";
          echo "<span class='font-medium'>$display_name</span>";
          echo "<span class='text-gray-500'>@$username</span>";
