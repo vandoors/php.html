@@ -10,7 +10,7 @@
       );
 
    $query = "SELECT `id`, `user_id`, `date`, `content` FROM twitter_tweet WHERE user_id = ? ORDER BY `date` DESC";
-   $result = parameterizedQuery($dbc, $query, 'i', $_GET['user'])
+   $result = parameterizedQuery($dbc, $query, 'i', $user_id)
       or trigger_error(mysqli_error($dbc), E_USER_ERROR);
 
    if (mysqli_num_rows($result) > 0) {

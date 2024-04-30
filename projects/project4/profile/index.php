@@ -21,7 +21,7 @@ $page_title = 'Twitter - Log In';
             <?php endif; ?>
          </aside>
          <div class="w-2/3 min-h-dvh border-x pt-4">
-            <?php if (isset($_GET['user'])) : ?>
+            <?php if (isset($_GET['u'])) : ?>
                <?php
                require_once('/var/www/html/projects/project4/dbconnection.php');
                require_once('/var/www/html/projects/project4/queryutils.php');
@@ -32,19 +32,20 @@ $page_title = 'Twitter - Log In';
                      E_USER_ERROR
                   );
 
-               $query2 = "SELECT `username`, `display_name` FROM twitter_user WHERE `id` = ?";
-               $result2 = parameterizedQuery($dbc, $query2, 'i', $_GET['user'])
+               $query2 = "SELECT `id`, `username`, `display_name` FROM twitter_user WHERE `username` = ?";
+               $result2 = parameterizedQuery($dbc, $query2, 's', $_GET['u'])
                   or trigger_error(mysqli_error($dbc), E_USER_ERROR);
 
                if (mysqli_num_rows($result2) == 0) {
                   header("Location: ../");
                } else {
                   $row2 = mysqli_fetch_array($result2);
+                  $user_id = $row2['id'];
                   $username = $row2['username'];
                   $display_name = $row2['display_name'];
                }
                ?>
-               <div class="text-center font-bold text-lg pb-4">@<?= $display_name ?>'s recent posts</div>
+               <div class="text-center font-bold text-lg pb-4">@<?= $username ?>'s recent posts</div>
                <?php require_once('timeline.php'); ?>
             <?php else : ?>
                <?php header("Location: ../"); ?>
