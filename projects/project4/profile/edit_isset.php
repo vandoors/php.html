@@ -33,6 +33,7 @@ if (!empty($_POST['username'])) {
       parameterizedQuery($dbc, $query, 'si', $_POST['username'], $_SESSION['id'])
          or trigger_error(mysqli_error($dbc), E_USER_ERROR);
    } else {
+      $username = $_POST['username'];
       echo "<p class='text-yellow-600'>An account already exists for username "
          .  "<b>$username</b>; please use "
          .  "a different username.</p>";
