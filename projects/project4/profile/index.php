@@ -35,11 +35,11 @@ $page_title = 'Twitter - Log In';
                $query2 = "SELECT `username`, `display_name` FROM twitter_user WHERE `id` = ?";
                $result2 = parameterizedQuery($dbc, $query2, 'i', $_GET['user'])
                   or trigger_error(mysqli_error($dbc), E_USER_ERROR);
-               $row2 = mysqli_fetch_array($result2);
 
-               if (mysqli_num_rows($result) == 0) {
+               if (mysqli_num_rows($result2) == 0) {
                   header("Location: ../");
                } else {
+                  $row2 = mysqli_fetch_array($result2);
                   $username = $row2['username'];
                   $display_name = $row2['display_name'];
                }
