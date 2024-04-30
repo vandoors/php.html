@@ -20,7 +20,7 @@ $page_title = 'Twitter - Log In';
                <?php require_once('../home/signedin.php'); ?>
             <?php endif; ?>
          </aside>
-         <div class="w-2/3 min-h-dvh border-x pt-4 px-4">
+         <div class="w-2/3 min-h-dvh border-x pt-4">
             <?php if (isset($_GET['user'])) : ?>
                <?php
                require_once('/var/www/html/projects/project4/dbconnection.php');
