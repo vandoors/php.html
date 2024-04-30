@@ -26,8 +26,9 @@
          $query = "SELECT `username`, `display_name` FROM twitter_user WHERE `id` = ?";
          $result = parameterizedQuery($dbc, $query, 'i', $user_id)
             or trigger_error(mysqli_error($dbc), E_USER_ERROR);
-         $username = mysqli_fetch_array($result)['username'];
-         $display_name = mysqli_fetch_array($result)['display_name'];
+         $row = mysqli_fetch_array($result);
+         $username = $row['username'];
+         $display_name = $row['display_name'];
 
          echo "<article>";
          echo "<header>";
