@@ -17,7 +17,7 @@ $page_title = 'Twitter - Sign Up';
             <?php else : ?>
             <?php endif; ?>
          </aside>
-         <div class="w-2/3 min-h-dvh border-x pt-4">
+         <div class="w-2/3 min-h-dvh border-x pt-4 px-4">
             <div class="text-center font-bold text-lg pb-4">Sign up</div>
             <?php if (!isset($_SESSION['id'])) : ?>
                <?php require_once('page.php'); ?>

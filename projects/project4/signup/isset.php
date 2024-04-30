@@ -38,7 +38,7 @@ if (
       $show_sign_up_form = false;
    } else // An account already exists for this user
    {
-      echo "<p>An account already exists for username "
+      echo "<p class='text-yellow-600'>An account already exists for username "
          .  "<b>$username</b>; please use "
          .  "a different username.</p>";
    }
