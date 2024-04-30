@@ -17,6 +17,7 @@ $page_title = 'Twitter - Sign Up';
             <?php if (!isset($_SESSION['id'])) : ?>
                <?php require_once('../home/default.php'); ?>
             <?php else : ?>
+               <?php require_once('../home/signedin.php'); ?>
             <?php endif; ?>
          </aside>
          <div class="w-2/3 min-h-dvh border-x pt-4 px-4">
@@ -24,10 +25,7 @@ $page_title = 'Twitter - Sign Up';
             <?php if (!isset($_SESSION['id'])) : ?>
                <?php require_once('page.php'); ?>
             <?php else : ?>
-               <?php
-               $home_url = dirname($_SERVER['PHP_SELF']);
-               header('Location: ' . $home_url);
-               ?>
+               <p>You are already logged in.</p>
             <?php endif; ?>
          </div>
       </div>
