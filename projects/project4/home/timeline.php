@@ -63,7 +63,7 @@
          echo "</header>";
          echo "<p class='tweet-content'>$content</p>";
 
-         if ($user_id == $_SESSION['id']) {
+         if (isset($_SESSION['id']) && $user_id == $_SESSION['id']) {
             echo "<form method='POST' action='" . $_SERVER['PHP_SELF'] . "' class='pt-2'>";
             echo "<input type='hidden' name='tweet_id' value='$tweet_id'>";
             echo "<button type='submit' class='block ml-auto text-right text-gray-400 hover:text-red-500' name='delete_tweet'>Delete</button>";
